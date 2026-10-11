@@ -5,6 +5,6 @@
 [node name="Game" type="Node2D" unique_id=106238846]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2048161342]
-offset_right = 1181.0
-offset_bottom = 682.0
+offset_right = 1296.0
+offset_bottom = 735.0
 texture = SubResource("CanvasTexture_2poj3")
