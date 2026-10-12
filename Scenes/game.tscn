@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_ebmjs"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_2poj3"]
 
 [node name="Game" type="Node2D" unique_id=106238846]
@@ -8,3 +10,6 @@
 offset_right = 1296.0
 offset_bottom = 735.0
 texture = SubResource("CanvasTexture_2poj3")
+
+[node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_ebmjs")]
+scale = Vector2(3, 3)
