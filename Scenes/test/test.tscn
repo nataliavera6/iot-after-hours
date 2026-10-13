@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bgmubb6beo8x0"]
+
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_7c5c0"]
+[ext_resource type="PackedScene" uid="uid://bp8gafbthycve" path="res://Scenes/orc.tscn" id="2_8k5ys"]
+
+[node name="Test" type="Node2D" unique_id=1707519722]
+
+[node name="Orc" parent="." unique_id=1585025158 instance=ExtResource("2_8k5ys")]
+position = Vector2(137, 19)
+collision_layer = 1
+
+[node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_7c5c0")]
+position = Vector2(156, 81)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1899855884]
+zoom = Vector2(3, 3)
