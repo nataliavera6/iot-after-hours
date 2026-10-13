@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dot7np55l62vb"]
 
-[ext_resource type="Script" uid="uid://dvjdbxjnot74h" path="res://Scenes/pizarra_puzzle.gd" id="1_vxn4p"]
+[ext_resource type="Script" uid="uid://dvjdbxjnot74h" path="res://Scripts/pizarra_puzzle.gd" id="1_vxn4p"]
 [ext_resource type="FontFile" uid="uid://cumvq27f7voch" path="res://assets/smooth-marker-font/SmoothMarker-45d6.ttf" id="2_aesal"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_tdd5b"]
@@ -9,6 +9,7 @@
 script = ExtResource("1_vxn4p")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2072563949]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
