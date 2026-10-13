@@ -153,6 +153,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vd5x3"]
+radius = 20.024984
 
 [node name="Orc" unique_id=1585025158 instance=ExtResource("1_sfdtf")]
 script = ExtResource("2_5abox")

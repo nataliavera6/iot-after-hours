@@ -29,4 +29,9 @@ func _physics_process(delta: float) -> void:
 func die():
 	queue_free()
 
-	
+#Area is the player
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	#make sure its the player
+	if area.collision_layer == 1:
+		#for now just a print
+		print("Player got hit")

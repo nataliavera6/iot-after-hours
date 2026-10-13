@@ -5,11 +5,12 @@
 
 [node name="Test" type="Node2D" unique_id=1707519722]
 
+[node name="Orc" parent="." unique_id=1585025158 instance=ExtResource("2_8k5ys")]
+position = Vector2(137, 19)
+collision_layer = 1
+
 [node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_7c5c0")]
 position = Vector2(156, 81)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1899855884]
 zoom = Vector2(3, 3)
-
-[node name="Orc" parent="." unique_id=1585025158 instance=ExtResource("2_8k5ys")]
-position = Vector2(137, 19)
