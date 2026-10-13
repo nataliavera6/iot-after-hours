@@ -63,4 +63,102 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1222820443]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1117207550]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_tdd5b")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=412313587]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.5
+offset_top = -165.18
+offset_right = 206.5
+offset_bottom = -65.17999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "GOOD JOB
+MATH WHIZ! :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button2" type="Button" parent="CanvasLayer" unique_id=1198351889]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -166.23999
+offset_right = 182.0
+offset_bottom = -58.23999
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=767101114]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2" unique_id=1348758585]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_tdd5b")
+
+[node name="Label" type="Label" parent="CanvasLayer2" unique_id=1832494446]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.5
+offset_top = -165.18
+offset_right = 206.5
+offset_bottom = -65.17999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "WRONG
+try studying next time :/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer2" unique_id=89925783]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -137.12
+offset_right = 182.0
+offset_bottom = -29.119995
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "Try again"
+
 [connection signal="text_submitted" from="HBoxContainer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="CanvasLayer/button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]
