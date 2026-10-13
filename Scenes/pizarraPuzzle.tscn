@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dot7np55l62vb"]
+
+[ext_resource type="Script" uid="uid://dvjdbxjnot74h" path="res://Scripts/pizarra_puzzle.gd" id="1_vxn4p"]
+[ext_resource type="FontFile" uid="uid://cumvq27f7voch" path="res://assets/smooth-marker-font/SmoothMarker-45d6.ttf" id="2_aesal"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_tdd5b"]
+
+[node name="PizarraPuzzle" type="CanvasLayer" unique_id=674923541]
+script = ExtResource("1_vxn4p")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2072563949]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_tdd5b")
+
+[node name="Label" type="Label" parent="." unique_id=737481508]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.5
+offset_top = -107.59
+offset_right = 206.5
+offset_bottom = -7.5899963
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "6x - 3 = 15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=921187034]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -185.0
+offset_top = -135.34998
+offset_right = 185.0
+offset_bottom = -35.349976
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label2" type="Label" parent="HBoxContainer" unique_id=1665118094]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "x = "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="inputBox" type="LineEdit" parent="HBoxContainer" unique_id=371522109]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+alignment = 1
+
+[node name="WinScreen" type="CanvasLayer" parent="." unique_id=1222820443]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="WinScreen" unique_id=1117207550]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_tdd5b")
+
+[node name="Label" type="Label" parent="WinScreen" unique_id=412313587]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.5
+offset_top = -165.18
+offset_right = 206.5
+offset_bottom = -65.17999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "GOOD JOB
+MATH WHIZ! :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button2" type="Button" parent="WinScreen" unique_id=1198351889]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -166.23999
+offset_right = 182.0
+offset_bottom = -58.23999
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[node name="LoseScreen" type="CanvasLayer" parent="." unique_id=767101114]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="LoseScreen" unique_id=1348758585]
+modulate = Color(0.86738986, 0.8556491, 0.75088537, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_tdd5b")
+
+[node name="Label" type="Label" parent="LoseScreen" unique_id=1832494446]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.5
+offset_top = -165.18
+offset_right = 206.5
+offset_bottom = -65.17999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "WRONG
+try studying next time :/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tryAgain" type="Button" parent="LoseScreen" unique_id=89925783]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -137.12
+offset_right = 182.0
+offset_bottom = -29.119995
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_aesal")
+theme_override_font_sizes/font_size = 100
+text = "Try again"
+
+[connection signal="text_submitted" from="HBoxContainer/inputBox" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="WinScreen/button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="LoseScreen/tryAgain" to="." method="_on_button_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://dot7np55l62vb" path="res://Scenes/pizarraPuzzle.tscn" id="2_qxrlw"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2poj3"]
 
@@ -13,3 +14,6 @@ texture = SubResource("CanvasTexture_2poj3")
 
 [node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_ebmjs")]
 scale = Vector2(3, 3)
+
+[node name="PizarraPuzzle" parent="." unique_id=674923541 instance=ExtResource("2_qxrlw")]
+visible = false
