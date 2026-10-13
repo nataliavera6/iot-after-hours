@@ -14,16 +14,16 @@ func _process(delta: float) -> void:
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	if (new_text=="2"):
-		$CanvasLayer.visible=true
+		$WinScreen.visible=true
 	else:
-		$CanvasLayer2.visible=true
-		$HBoxContainer/LineEdit.text=''
+		$LoseScreen.visible=true
+		$HBoxContainer/inputBox.text=''
 
 
 func _on_button_pressed() -> void:
-	$CanvasLayer2.visible=false
+	$LoseScreen.visible=false
 
 
 func _on_button_2_pressed() -> void:
-	#return to game logic
+	#return to game 
 	pass # Replace with function body.
