@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cdov58mjyxsgx"]
+
+[ext_resource type="PackedScene" uid="uid://0n7p714g8c3i" path="res://Scenes/SnackRestock/shelf.tscn" id="1_1xw0x"]
+[ext_resource type="Script" uid="uid://vmeuea30dj2b" path="res://Scripts/SnackRestockFolder/snackrestock.gd" id="1_24gfj"]
+[ext_resource type="PackedScene" uid="uid://cbe4sbnciugc" path="res://Scenes/SnackRestock/snacks/apple.tscn" id="2_jc8tv"]
+[ext_resource type="PackedScene" uid="uid://dmcyuj0wrr7be" path="res://Scenes/SnackRestock/snacks/wrapped_sweet.tscn" id="3_8loks"]
+[ext_resource type="PackedScene" uid="uid://kgrunkrt2617" path="res://Scenes/SnackRestock/snacks/chips.tscn" id="3_wnii1"]
+[ext_resource type="PackedScene" uid="uid://cadk0rxq32hyl" path="res://Scenes/SnackRestock/snacks/soda.tscn" id="4_07stp"]
+[ext_resource type="PackedScene" uid="uid://dkh41y8mqxxfd" path="res://Scenes/SnackRestock/snacks/coffe.tscn" id="5_cvo41"]
+[ext_resource type="PackedScene" uid="uid://41xwkxahgdrd" path="res://Scenes/SnackRestock/snacks/hamburger.tscn" id="8_4igre"]
+[ext_resource type="PackedScene" uid="uid://bvl0lvpo4cdqn" path="res://Scenes/SnackRestock/snacks/cupcake.tscn" id="9_yyv84"]
+[ext_resource type="PackedScene" uid="uid://dq8d1uxn3cnua" path="res://Scenes/SnackRestock/snacks/hot_dog.tscn" id="10_4igre"]
+
+[node name="SnackRestock" type="CanvasLayer" unique_id=1110966314]
+script = ExtResource("1_24gfj")
+
+[node name="Rect" type="ColorRect" parent="." unique_id=2130767926]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="Shelfs" type="Node2D" parent="Rect" unique_id=416246072]
+position = Vector2(184, 152)
+scale = Vector2(2, 2.086)
+
+[node name="Shelf" parent="Rect/Shelfs" unique_id=551785758 instance=ExtResource("1_1xw0x")]
+position = Vector2(-14.500004, 34.51582)
+scale = Vector2(6, 6)
+
+[node name="Shelf2" parent="Rect/Shelfs" unique_id=416247915 instance=ExtResource("1_1xw0x")]
+position = Vector2(149.5, 34.51582)
+scale = Vector2(6, 6)
+category = 1
+
+[node name="Shelf3" parent="Rect/Shelfs" unique_id=903772859 instance=ExtResource("1_1xw0x")]
+position = Vector2(313.5, 34.51582)
+scale = Vector2(6, 6)
+category = 2
+
+[node name="Shelf4" parent="Rect/Shelfs" unique_id=180249152 instance=ExtResource("1_1xw0x")]
+position = Vector2(473.5, 34.51582)
+scale = Vector2(6, 6)
+category = 3
+
+[node name="Snacks" type="Node2D" parent="Rect" unique_id=270071873]
+position = Vector2(688, 552)
+scale = Vector2(3, 3)
+
+[node name="WrappedSweet" parent="Rect/Snacks" unique_id=1574886783 instance=ExtResource("3_8loks")]
+position = Vector2(48, -26.666666)
+
+[node name="Apple" parent="Rect/Snacks" unique_id=1341170959 instance=ExtResource("2_jc8tv")]
+
+[node name="Chips" parent="Rect/Snacks" unique_id=1370245452 instance=ExtResource("3_wnii1")]
+position = Vector2(-66.66667, 18.666668)
+
+[node name="Soda" parent="Rect/Snacks" unique_id=1726531653 instance=ExtResource("4_07stp")]
+position = Vector2(72, 26.666668)
+
+[node name="Coffe" parent="Rect/Snacks" unique_id=967144073 instance=ExtResource("5_cvo41")]
+position = Vector2(-160, -2.6666667)
+
+[node name="Hamburger" parent="Rect/Snacks" unique_id=1143460108 instance=ExtResource("8_4igre")]
+position = Vector2(120, -5.3333335)
+category = 3
+
+[node name="Cupcake" parent="Rect/Snacks" unique_id=275453458 instance=ExtResource("9_yyv84")]
+position = Vector2(-109.333336, -26.666668)
+
+[node name="HotDog" parent="Rect/Snacks" unique_id=1333662467 instance=ExtResource("10_4igre")]
+position = Vector2(-45.33333, -32)
+
+[node name="Timer" type="Timer" parent="." unique_id=96928126]
+wait_time = 30.0
+one_shot = true
+
+[node name="Control" type="Control" parent="." unique_id=99631647]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -640.0
+offset_right = 624.0
+offset_bottom = 704.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="TimerText" type="Label" parent="Control" unique_id=481537944]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.999939
+offset_right = 29.000061
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+text = "Timer"
+
+[node name="Counter" type="Label" parent="Control" unique_id=681931225]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -279.99994
+offset_top = -80.0
+offset_right = -195.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(3, 3)
+text = "Sorted: 0/0
+
+"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

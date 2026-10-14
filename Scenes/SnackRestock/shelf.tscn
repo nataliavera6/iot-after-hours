@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://0n7p714g8c3i"]
+
+[ext_resource type="Script" uid="uid://dtxnqbmyu61yn" path="res://Scripts/SnackRestockFolder/shelf.gd" id="1_ndc05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
+
+[node name="Shelf" type="Area2D" unique_id=551785758]
+script = ExtResource("1_ndc05")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1262363018]
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = 11.0
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1513568079]
+shape = SubResource("RectangleShape2D_6tu7v")
