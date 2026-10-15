@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://6olc4qi6ett4"]
+
+[ext_resource type="Script" uid="uid://cou0rcfibxejf" path="res://Scenes/microwave_puzzle.gd" id="1_1nfse"]
+[ext_resource type="Texture2D" uid="uid://cqrvhuyixohhu" path="res://assets/microwave-puzzle/microwave-puzzle-background.png" id="1_xeqmj"]
+[ext_resource type="Texture2D" uid="uid://cr4oab17t4hq4" path="res://assets/microwave-puzzle/eyes (2).png" id="3_oemj3"]
+[ext_resource type="Script" uid="uid://bguxri4ecls0a" path="res://Scenes/button_1.gd" id="3_qxyau"]
+[ext_resource type="Script" uid="uid://beswbgad4wajm" path="res://Scenes/button_2.gd" id="4_y77q1"]
+[ext_resource type="Script" uid="uid://c41iaiytqmbu5" path="res://Scenes/button_3.gd" id="5_0n5ev"]
+[ext_resource type="Script" uid="uid://c6iwwt70ruamk" path="res://Scenes/button_4.gd" id="6_oemj3"]
+[ext_resource type="Script" uid="uid://cxxbmivme58a4" path="res://Scenes/button_5.gd" id="7_j7d7l"]
+[ext_resource type="Script" uid="uid://muinvp6anum" path="res://Scenes/button_6.gd" id="8_dvbvy"]
+[ext_resource type="Script" uid="uid://c4wv72uvtm20c" path="res://Scenes/button_7.gd" id="9_r8v4m"]
+[ext_resource type="Script" uid="uid://bum86nkyuphl4" path="res://Scenes/button_8.gd" id="10_aijiq"]
+[ext_resource type="Script" uid="uid://dvguiot6lg16j" path="res://Scenes/button_9.gd" id="11_xnuuo"]
+[ext_resource type="Script" uid="uid://c7ke17glaipi7" path="res://Scenes/display.gd" id="12_0n5ev"]
+
+[node name="MicrowavePuzzle" type="CanvasLayer" unique_id=1436151565]
+script = ExtResource("1_1nfse")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2117815911]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xeqmj")
+expand_mode = 1
+
+[node name="eyes" type="TextureRect" parent="." unique_id=283995276]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_oemj3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1383771598]
+offset_left = 303.0
+offset_top = 29.0
+offset_right = 882.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+text = "Heat Up Your Food For 2:30!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="." unique_id=1215887443]
+offset_left = 722.0
+offset_top = 303.0
+offset_right = 744.0
+offset_bottom = 339.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("3_qxyau")
+
+[node name="Button2" type="Button" parent="." unique_id=447148382]
+offset_left = 804.0
+offset_top = 390.0
+offset_right = 826.0
+offset_bottom = 426.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("4_y77q1")
+
+[node name="Button3" type="Button" parent="." unique_id=2039412114]
+offset_left = 764.0
+offset_top = 389.0
+offset_right = 786.0
+offset_bottom = 425.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("5_0n5ev")
+
+[node name="Button4" type="Button" parent="." unique_id=314803113]
+offset_left = 721.0
+offset_top = 389.0
+offset_right = 743.0
+offset_bottom = 425.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("6_oemj3")
+
+[node name="Button5" type="Button" parent="." unique_id=1369615132]
+offset_left = 805.0
+offset_top = 347.0
+offset_right = 827.0
+offset_bottom = 383.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("7_j7d7l")
+
+[node name="Button6" type="Button" parent="." unique_id=781706515]
+offset_left = 763.0
+offset_top = 346.0
+offset_right = 785.0
+offset_bottom = 382.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("8_dvbvy")
+
+[node name="Button7" type="Button" parent="." unique_id=341754411]
+offset_left = 721.0
+offset_top = 348.0
+offset_right = 743.0
+offset_bottom = 384.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("9_r8v4m")
+
+[node name="Button8" type="Button" parent="." unique_id=2034477045]
+offset_left = 804.0
+offset_top = 302.0
+offset_right = 826.0
+offset_bottom = 338.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.8666667, 0, 1)
+script = ExtResource("10_aijiq")
+
+[node name="Button9" type="Button" parent="." unique_id=1918400789]
+offset_left = 763.0
+offset_top = 302.0
+offset_right = 785.0
+offset_bottom = 338.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(0, 0.86568, 0, 1)
+script = ExtResource("11_xnuuo")
+
+[node name="Display" type="Label" parent="." unique_id=793190497]
+offset_left = 718.0
+offset_top = 243.0
+offset_right = 832.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0.8666667, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_0n5ev")
+
+[node name="Timer" type="Timer" parent="." unique_id=1112052652]
+wait_time = 1.5
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=2130047674]
+wait_time = 8.0
+autostart = true
+
+[node name="Timer3" type="Timer" parent="." unique_id=1005477420]
+wait_time = 9.5
+autostart = true
+
+[node name="Timer4" type="Timer" parent="." unique_id=256143156]
+wait_time = 3.0
+autostart = true
+
+[node name="LoseScreen" type="CanvasLayer" parent="." unique_id=296837946]
+visible = false
+
+[node name="Label" type="Label" parent="LoseScreen" unique_id=994598844]
+offset_left = 303.0
+offset_top = 29.0
+offset_right = 882.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+text = "It Blew Up..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="LoseScreen" unique_id=655497709]
+offset_left = 500.0
+offset_top = 115.0
+offset_right = 655.0
+offset_bottom = 158.0
+text = "Try Again?"
+
+[node name="WinScreen" type="CanvasLayer" parent="." unique_id=109793386]
+visible = false
+
+[node name="Label" type="Label" parent="WinScreen" unique_id=937780797]
+offset_left = 303.0
+offset_top = 29.0
+offset_right = 882.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+text = "Your Food Will Be Ready Soon!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
+[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
+[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
+[connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button1" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button4" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button5" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button6" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button7" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button8" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Button9" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer2" to="Button1" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button4" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button5" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button6" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button7" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button8" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="Button9" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer3" to="Button1" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button4" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button5" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button6" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button7" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button8" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer3" to="Button9" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer4" to="Button1" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button4" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button5" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button6" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button7" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button8" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer4" to="Button9" method="_on_timer_timeout"]
+[connection signal="pressed" from="LoseScreen/RetryButton" to="." method="_on_retry_button_pressed"]
