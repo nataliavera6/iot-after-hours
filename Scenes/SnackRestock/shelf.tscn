@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dtxnqbmyu61yn" path="res://Scripts/SnackRestockFolder/shelf.gd" id="1_ndc05"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
+size = Vector2(23, 3)
 
 [node name="Shelf" type="Area2D" unique_id=551785758]
 script = ExtResource("1_ndc05")
@@ -12,7 +13,7 @@ offset_left = -11.0
 offset_top = -10.0
 offset_right = 11.0
 offset_bottom = 11.0
-color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+color = Color(0.19215687, 0.19215687, 0.19215687, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1513568079]
 shape = SubResource("RectangleShape2D_6tu7v")

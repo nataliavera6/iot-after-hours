@@ -4,8 +4,8 @@ extends CanvasLayer
 signal finished(won : bool)
 @export var time_limit : float = 30
 
-@onready var shelves : Node2D = $Rect/Shelfs
-@onready var snacks : Node2D = $Rect/Snacks
+@onready var shelves : Node2D = $Shelfs
+@onready var snacks : Node2D = $Snacks
 @onready var control : Control = $Control
 @onready var timer_label : Label = control.get_node("TimerText")
 @onready var counter_label: Label = control.get_node("Counter")

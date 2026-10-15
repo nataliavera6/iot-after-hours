@@ -14,6 +14,7 @@ var drag_offset : Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	start_position = global_position
+	input_event.connect(_on_input_event)
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if is_placed:

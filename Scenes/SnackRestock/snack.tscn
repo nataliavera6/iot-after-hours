@@ -5,11 +5,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
 
 [node name="Snack" type="Area2D" unique_id=1574886783]
+position = Vector2(154, 115)
 script = ExtResource("1_26ynn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=544721491]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1253001600]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321958576]
 shape = SubResource("RectangleShape2D_6tu7v")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

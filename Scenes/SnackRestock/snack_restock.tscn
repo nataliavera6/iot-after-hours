@@ -2,14 +2,49 @@
 
 [ext_resource type="PackedScene" uid="uid://0n7p714g8c3i" path="res://Scenes/SnackRestock/shelf.tscn" id="1_1xw0x"]
 [ext_resource type="Script" uid="uid://vmeuea30dj2b" path="res://Scripts/SnackRestockFolder/snackrestock.gd" id="1_24gfj"]
-[ext_resource type="PackedScene" uid="uid://cbe4sbnciugc" path="res://Scenes/SnackRestock/snacks/apple.tscn" id="2_jc8tv"]
-[ext_resource type="PackedScene" uid="uid://dmcyuj0wrr7be" path="res://Scenes/SnackRestock/snacks/wrapped_sweet.tscn" id="3_8loks"]
-[ext_resource type="PackedScene" uid="uid://kgrunkrt2617" path="res://Scenes/SnackRestock/snacks/chips.tscn" id="3_wnii1"]
-[ext_resource type="PackedScene" uid="uid://cadk0rxq32hyl" path="res://Scenes/SnackRestock/snacks/soda.tscn" id="4_07stp"]
-[ext_resource type="PackedScene" uid="uid://dkh41y8mqxxfd" path="res://Scenes/SnackRestock/snacks/coffe.tscn" id="5_cvo41"]
-[ext_resource type="PackedScene" uid="uid://41xwkxahgdrd" path="res://Scenes/SnackRestock/snacks/hamburger.tscn" id="8_4igre"]
-[ext_resource type="PackedScene" uid="uid://bvl0lvpo4cdqn" path="res://Scenes/SnackRestock/snacks/cupcake.tscn" id="9_yyv84"]
-[ext_resource type="PackedScene" uid="uid://dq8d1uxn3cnua" path="res://Scenes/SnackRestock/snacks/hot_dog.tscn" id="10_4igre"]
+[ext_resource type="Texture2D" uid="uid://qfdk1gu344n3" path="res://assets/food icon pack 32x32/32x32 icons/Cupcake.png" id="10_4igre"]
+[ext_resource type="Script" uid="uid://cfarl0tnyd11q" path="res://Scripts/SnackRestockFolder/snack.gd" id="11_6g6nh"]
+[ext_resource type="Texture2D" uid="uid://d1wld08fn3i7p" path="res://assets/food icon pack 32x32/32x32 icons/Bread slice.png" id="11_yyv84"]
+[ext_resource type="Texture2D" uid="uid://cegrbikg6oqt7" path="res://assets/food icon pack 32x32/32x32 icons/Hamburger.png" id="12_0qjw7"]
+[ext_resource type="Texture2D" uid="uid://qwtjuxnjfc85" path="res://assets/food icon pack 32x32/32x32 icons/Applles.png" id="12_alheq"]
+[ext_resource type="Texture2D" uid="uid://c51h7vbatt00t" path="res://assets/food icon pack 32x32/32x32 icons/Fried Egg.png" id="13_6g6nh"]
+[ext_resource type="Texture2D" uid="uid://m2jbi55xxfvg" path="res://assets/food icon pack 32x32/32x32 icons/Bananas.png" id="13_t2vxi"]
+[ext_resource type="Texture2D" uid="uid://ooe4pg1w6fxq" path="res://assets/food icon pack 32x32/32x32 icons/Chips.png" id="14_alheq"]
+[ext_resource type="Texture2D" uid="uid://h0p3v1yvajv6" path="res://assets/food icon pack 32x32/32x32 icons/Hot dog.png" id="14_t2vxi"]
+[ext_resource type="Texture2D" uid="uid://b2klf2s6a48pf" path="res://assets/food icon pack 32x32/32x32 icons/Soda Can.png" id="15_t2vxi"]
+[ext_resource type="Texture2D" uid="uid://ckgub3cjagr5r" path="res://assets/food icon pack 32x32/32x32 icons/Coffee mug.png" id="16_pul1v"]
+[ext_resource type="Texture2D" uid="uid://c0exrlxus1x0l" path="res://assets/food icon pack 32x32/32x32 icons/Candy canes.png" id="17_hiawx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
+size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bb0j3"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8ugx"]
+size = Vector2(20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y0qw"]
+size = Vector2(20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t85t3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei1b0"]
+size = Vector2(20, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr8ri"]
+size = Vector2(26.666668, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yphhv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3726"]
+size = Vector2(26.666668, 23.333332)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2rju"]
+size = Vector2(26.666664, 26.666672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny2yn"]
+size = Vector2(26.666664, 23.333328)
 
 [node name="SnackRestock" type="CanvasLayer" unique_id=1110966314]
 script = ExtResource("1_24gfj")
@@ -18,61 +53,97 @@ script = ExtResource("1_24gfj")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.1584723, 0.15847233, 0.1584723, 1)
 
-[node name="Shelfs" type="Node2D" parent="Rect" unique_id=416246072]
-position = Vector2(184, 152)
-scale = Vector2(2, 2.086)
+[node name="Fridge" type="Control" parent="Rect" unique_id=2136000407]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -96.0
+offset_right = -72.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="Shelf" parent="Rect/Shelfs" unique_id=551785758 instance=ExtResource("1_1xw0x")]
-position = Vector2(-14.500004, 34.51582)
-scale = Vector2(6, 6)
+[node name="ColorRect" type="ColorRect" parent="Rect/Fridge" unique_id=683961004]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -266.0
+offset_right = 156.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.646029, 0.646029, 0.646029, 1)
 
-[node name="Shelf2" parent="Rect/Shelfs" unique_id=416247915 instance=ExtResource("1_1xw0x")]
-position = Vector2(149.5, 34.51582)
-scale = Vector2(6, 6)
-category = 1
+[node name="ColorRect2" type="ColorRect" parent="Rect/Fridge" unique_id=780521634]
+layout_mode = 0
+offset_left = -120.0
+offset_top = -224.0
+offset_right = 176.0
+offset_bottom = 272.0
+mouse_filter = 2
+color = Color(0.88065517, 1, 0.9995299, 1)
 
-[node name="Shelf3" parent="Rect/Shelfs" unique_id=903772859 instance=ExtResource("1_1xw0x")]
-position = Vector2(313.5, 34.51582)
-scale = Vector2(6, 6)
-category = 2
+[node name="ColorRect3" type="ColorRect" parent="Rect/Fridge" unique_id=1893722307]
+layout_mode = 0
+offset_left = 176.0
+offset_top = -248.0
+offset_right = 464.0
+offset_bottom = 284.0
+mouse_filter = 2
+color = Color(0.44291073, 0.4429108, 0.4429106, 1)
 
-[node name="Shelf4" parent="Rect/Shelfs" unique_id=180249152 instance=ExtResource("1_1xw0x")]
-position = Vector2(473.5, 34.51582)
-scale = Vector2(6, 6)
-category = 3
+[node name="ColorRect4" type="ColorRect" parent="Rect/Fridge" unique_id=215907192]
+layout_mode = 0
+offset_left = 200.0
+offset_top = -208.0
+offset_right = 448.0
+offset_bottom = 256.0
+mouse_filter = 2
+color = Color(0.8627451, 1, 1, 1)
 
-[node name="Snacks" type="Node2D" parent="Rect" unique_id=270071873]
-position = Vector2(688, 552)
-scale = Vector2(3, 3)
+[node name="ColorRect5" type="ColorRect" parent="Rect/Fridge" unique_id=732143649]
+layout_mode = 0
+offset_left = -120.0
+offset_top = -80.0
+offset_right = 176.0
+offset_bottom = -48.0
+mouse_filter = 2
+color = Color(0.5709799, 0.5709799, 0.5709799, 1)
 
-[node name="WrappedSweet" parent="Rect/Snacks" unique_id=1574886783 instance=ExtResource("3_8loks")]
-position = Vector2(48, -26.666666)
+[node name="ColorRect6" type="ColorRect" parent="Rect/Fridge" unique_id=1882368692]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 80.0
+offset_right = 176.0
+offset_bottom = 112.0
+mouse_filter = 2
+color = Color(0.5709799, 0.5709799, 0.5709799, 1)
 
-[node name="Apple" parent="Rect/Snacks" unique_id=1341170959 instance=ExtResource("2_jc8tv")]
-
-[node name="Chips" parent="Rect/Snacks" unique_id=1370245452 instance=ExtResource("3_wnii1")]
-position = Vector2(-66.66667, 18.666668)
-
-[node name="Soda" parent="Rect/Snacks" unique_id=1726531653 instance=ExtResource("4_07stp")]
-position = Vector2(72, 26.666668)
-
-[node name="Coffe" parent="Rect/Snacks" unique_id=967144073 instance=ExtResource("5_cvo41")]
-position = Vector2(-160, -2.6666667)
-
-[node name="Hamburger" parent="Rect/Snacks" unique_id=1143460108 instance=ExtResource("8_4igre")]
-position = Vector2(120, -5.3333335)
-category = 3
-
-[node name="Cupcake" parent="Rect/Snacks" unique_id=275453458 instance=ExtResource("9_yyv84")]
-position = Vector2(-109.333336, -26.666668)
-
-[node name="HotDog" parent="Rect/Snacks" unique_id=1333662467 instance=ExtResource("10_4igre")]
-position = Vector2(-45.33333, -32)
+[node name="ColorRect7" type="ColorRect" parent="Rect/Fridge" unique_id=721065966]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 80.0
+offset_right = 448.0
+offset_bottom = 112.0
+mouse_filter = 2
+color = Color(0.5709799, 0.5709799, 0.5709799, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=96928126]
 wait_time = 30.0
@@ -94,9 +165,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -15.999939
-offset_right = 29.000061
-offset_bottom = 23.0
+offset_left = 392.0
+offset_top = 7.9999995
+offset_right = 437.0
+offset_bottom = 31.0
 grow_horizontal = 2
 scale = Vector2(5, 5)
 text = "Timer"
@@ -118,5 +190,164 @@ scale = Vector2(3, 3)
 text = "Sorted: 0/0
 
 "
+
+[node name="Shelfs" type="Node2D" parent="." unique_id=416246072]
+position = Vector2(184, 152)
+scale = Vector2(2, 2.086)
+
+[node name="Shelf" parent="Shelfs" unique_id=551785758 instance=ExtResource("1_1xw0x")]
+position = Vector2(188, 11.505272)
+scale = Vector2(6, 6)
+
+[node name="Shelf2" parent="Shelfs" unique_id=416247915 instance=ExtResource("1_1xw0x")]
+position = Vector2(188, 88.20709)
+scale = Vector2(6, 6)
+category = 1
+
+[node name="Shelf3" parent="Shelfs" unique_id=903772859 instance=ExtResource("1_1xw0x")]
+position = Vector2(188, 176.41418)
+scale = Vector2(6, 6)
+category = 2
+
+[node name="Shelf4" parent="Shelfs" unique_id=180249152 instance=ExtResource("1_1xw0x")]
+position = Vector2(340, 84.372)
+scale = Vector2(6, 6)
+category = 3
+
+[node name="Snacks" type="Node2D" parent="." unique_id=1607034595]
+position = Vector2(56, 144)
+scale = Vector2(3, 3)
+
+[node name="Apple" type="Area2D" parent="Snacks" unique_id=1417972009]
+script = ExtResource("11_6g6nh")
+category = 1
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Apple" unique_id=1892588819]
+texture = ExtResource("12_alheq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Apple" unique_id=874555175]
+shape = SubResource("RectangleShape2D_6tu7v")
+
+[node name="Bananas" type="Area2D" parent="Snacks" unique_id=1232194904]
+position = Vector2(40, 0)
+script = ExtResource("11_6g6nh")
+category = 1
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Bananas" unique_id=716672046]
+texture = ExtResource("13_t2vxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Bananas" unique_id=1709156760]
+shape = SubResource("RectangleShape2D_bb0j3")
+
+[node name="Chips" type="Area2D" parent="Snacks" unique_id=2112356202]
+position = Vector2(24, 48)
+script = ExtResource("11_6g6nh")
+category = 1
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Chips" unique_id=1484252368]
+texture = ExtResource("14_alheq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Chips" unique_id=2141492298]
+shape = SubResource("RectangleShape2D_e8ugx")
+
+[node name="Soda" type="Area2D" parent="Snacks" unique_id=1553462967]
+position = Vector2(72, 40)
+script = ExtResource("11_6g6nh")
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Soda" unique_id=1136463588]
+texture = ExtResource("15_t2vxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Soda" unique_id=34224416]
+shape = SubResource("RectangleShape2D_1y0qw")
+
+[node name="Coffe" type="Area2D" parent="Snacks" unique_id=1362931364]
+position = Vector2(80, 104)
+script = ExtResource("11_6g6nh")
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Coffe" unique_id=921500236]
+texture = ExtResource("16_pul1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Coffe" unique_id=1861958782]
+shape = SubResource("RectangleShape2D_t85t3")
+
+[node name="CandyCanes" type="Area2D" parent="Snacks" unique_id=1434191121]
+position = Vector2(48, 80)
+script = ExtResource("11_6g6nh")
+category = 2
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/CandyCanes" unique_id=462698906]
+texture = ExtResource("17_hiawx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/CandyCanes" unique_id=1258717736]
+shape = SubResource("RectangleShape2D_ei1b0")
+
+[node name="Cupcake" type="Area2D" parent="Snacks" unique_id=1410371901]
+position = Vector2(5.333334, 93.333336)
+script = ExtResource("11_6g6nh")
+category = 2
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Cupcake" unique_id=153278655]
+texture = ExtResource("10_4igre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Cupcake" unique_id=2040735451]
+position = Vector2(-3.8146973e-06, 3)
+shape = SubResource("RectangleShape2D_kr8ri")
+
+[node name="Bread" type="Area2D" parent="Snacks" unique_id=802624733]
+position = Vector2(32, 122.66667)
+script = ExtResource("11_6g6nh")
+category = 1
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Bread" unique_id=953276930]
+texture = ExtResource("11_yyv84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Bread" unique_id=1526512910]
+shape = SubResource("RectangleShape2D_yphhv")
+
+[node name="Hamburger" type="Area2D" parent="Snacks" unique_id=1374371850]
+position = Vector2(8.000001, 157.33334)
+script = ExtResource("11_6g6nh")
+category = 3
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/Hamburger" unique_id=1546726175]
+texture = ExtResource("12_0qjw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/Hamburger" unique_id=1752102281]
+position = Vector2(0, 1.6666641)
+shape = SubResource("RectangleShape2D_r3726")
+
+[node name="FriedEgg" type="Area2D" parent="Snacks" unique_id=2100609455]
+position = Vector2(48, 152)
+script = ExtResource("11_6g6nh")
+category = 3
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/FriedEgg" unique_id=714711840]
+texture = ExtResource("13_6g6nh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/FriedEgg" unique_id=621629708]
+shape = SubResource("RectangleShape2D_r2rju")
+
+[node name="HotDog" type="Area2D" parent="Snacks" unique_id=1760913254]
+position = Vector2(93.333336, 154.66667)
+script = ExtResource("11_6g6nh")
+category = 3
+metadata/_custom_type_script = "uid://cfarl0tnyd11q"
+
+[node name="Sprite2D" type="Sprite2D" parent="Snacks/HotDog" unique_id=569451722]
+texture = ExtResource("14_t2vxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/HotDog" unique_id=2142778856]
+position = Vector2(0, 1.6666718)
+shape = SubResource("RectangleShape2D_ny2yn")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
