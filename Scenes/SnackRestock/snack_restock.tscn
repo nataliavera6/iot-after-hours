@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ooe4pg1w6fxq" path="res://assets/food icon pack 32x32/32x32 icons/Chips.png" id="14_alheq"]
 [ext_resource type="Texture2D" uid="uid://h0p3v1yvajv6" path="res://assets/food icon pack 32x32/32x32 icons/Hot dog.png" id="14_t2vxi"]
 [ext_resource type="Texture2D" uid="uid://b2klf2s6a48pf" path="res://assets/food icon pack 32x32/32x32 icons/Soda Can.png" id="15_t2vxi"]
+[ext_resource type="Texture2D" uid="uid://cbjms3wn00tso" path="res://assets/piggy_sheet.png" id="15_wf67d"]
 [ext_resource type="Texture2D" uid="uid://ckgub3cjagr5r" path="res://assets/food icon pack 32x32/32x32 icons/Coffee mug.png" id="16_pul1v"]
 [ext_resource type="Texture2D" uid="uid://c0exrlxus1x0l" path="res://assets/food icon pack 32x32/32x32 icons/Candy canes.png" id="17_hiawx"]
 
@@ -46,6 +47,49 @@ size = Vector2(26.666664, 26.666672)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny2yn"]
 size = Vector2(26.666664, 23.333328)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pul1v"]
+atlas = ExtResource("15_wf67d")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiawx"]
+atlas = ExtResource("15_wf67d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwxrq"]
+atlas = ExtResource("15_wf67d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qi2c"]
+atlas = ExtResource("15_wf67d")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvot4"]
+atlas = ExtResource("15_wf67d")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6tu7v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pul1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hiawx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwxrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qi2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvot4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="SnackRestock" type="CanvasLayer" unique_id=1110966314]
 script = ExtResource("1_24gfj")
 
@@ -53,12 +97,10 @@ script = ExtResource("1_24gfj")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+color = Color(0.21050721, 0.21050721, 0.21050721, 1)
 
 [node name="Fridge" type="Control" parent="Rect" unique_id=2136000407]
 layout_mode = 1
@@ -89,7 +131,7 @@ offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.646029, 0.646029, 0.646029, 1)
+color = Color(0.11304883, 0.11304883, 0.11304883, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Rect/Fridge" unique_id=780521634]
 layout_mode = 0
@@ -107,7 +149,7 @@ offset_top = -248.0
 offset_right = 464.0
 offset_bottom = 284.0
 mouse_filter = 2
-color = Color(0.44291073, 0.4429108, 0.4429106, 1)
+color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Rect/Fridge" unique_id=215907192]
 layout_mode = 0
@@ -125,7 +167,7 @@ offset_top = -80.0
 offset_right = 176.0
 offset_bottom = -48.0
 mouse_filter = 2
-color = Color(0.5709799, 0.5709799, 0.5709799, 1)
+color = Color(0.31616732, 0.31616735, 0.3161673, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Rect/Fridge" unique_id=1882368692]
 layout_mode = 0
@@ -134,7 +176,7 @@ offset_top = 80.0
 offset_right = 176.0
 offset_bottom = 112.0
 mouse_filter = 2
-color = Color(0.5709799, 0.5709799, 0.5709799, 1)
+color = Color(0.3647059, 0.3647059, 0.3647059, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="Rect/Fridge" unique_id=721065966]
 layout_mode = 0
@@ -143,7 +185,7 @@ offset_top = 80.0
 offset_right = 448.0
 offset_bottom = 112.0
 mouse_filter = 2
-color = Color(0.5709799, 0.5709799, 0.5709799, 1)
+color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=96928126]
 wait_time = 30.0
@@ -349,5 +391,12 @@ texture = ExtResource("14_t2vxi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Snacks/HotDog" unique_id=2142778856]
 position = Vector2(0, 1.6666718)
 shape = SubResource("RectangleShape2D_ny2yn")
+
+[node name="Piggy" type="AnimatedSprite2D" parent="." unique_id=165258060]
+position = Vector2(1096, 512)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_6tu7v")
+autoplay = "default"
+flip_h = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
