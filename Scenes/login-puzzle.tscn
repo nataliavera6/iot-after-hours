@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://gnu2c3wxmaiq"]
+
+[ext_resource type="Script" uid="uid://bccaxr127mu4" path="res://Scenes/login_puzzle.gd" id="1_2gd5i"]
+[ext_resource type="Texture2D" uid="uid://dwpulb1yjh4l7" path="res://assets/login-puzzle/login-puzzle-background.png" id="1_cyltp"]
+[ext_resource type="Texture2D" uid="uid://con5200d4e5lr" path="res://assets/login-puzzle/login-puzzle-background2.png" id="3_f88hj"]
+[ext_resource type="Texture2D" uid="uid://c38mbi0limkn5" path="res://assets/login-puzzle/login-puzzle-background3.png" id="4_4p73a"]
+[ext_resource type="Texture2D" uid="uid://b86d1vno4yi8l" path="res://assets/login-puzzle/login-puzzle-background4.png" id="5_mv22g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_esnmb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmybj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4p73a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mv22g"]
+
+[node name="LoginPuzzle" type="CanvasLayer" unique_id=137391248]
+script = ExtResource("1_2gd5i")
+
+[node name="Background1" type="TextureRect" parent="." unique_id=2052262964]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cyltp")
+expand_mode = 1
+
+[node name="Password" type="LineEdit" parent="Background1" unique_id=1867753972]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 481.0
+offset_right = 779.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_colors/font_placeholder_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_esnmb")
+placeholder_text = "Password"
+secret = true
+
+[node name="Username" type="LineEdit" parent="Background1" unique_id=1780297232]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 415.0
+offset_right = 774.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+theme_override_colors/font_outline_color = Color(0.7921569, 0.7921569, 0.7921569, 0.03529412)
+theme_override_colors/font_placeholder_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_colors/selection_color = Color(0.7921569, 0.7921569, 0.7921569, 0.03529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_esnmb")
+placeholder_text = "Username"
+
+[node name="LogIn" type="Button" parent="Background1" unique_id=2088258510]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 534.0
+offset_right = 442.0
+offset_bottom = 561.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+
+[node name="continue1" type="Button" parent="Background1" unique_id=1604095263]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 277.0
+offset_right = 896.0
+offset_bottom = 314.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4p73a")
+
+[node name="Label" type="Label" parent="Background1" unique_id=2143550283]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 30.0
+offset_right = 865.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Recover Your Account
+You Have 30 Seconds!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background2" type="TextureRect" parent="." unique_id=2039575309]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_f88hj")
+expand_mode = 1
+
+[node name="Password" type="LineEdit" parent="Background2" unique_id=941059072]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 481.0
+offset_right = 779.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_colors/font_placeholder_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_esnmb")
+placeholder_text = "Password"
+secret = true
+
+[node name="Username" type="LineEdit" parent="Background2" unique_id=1955427078]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 415.0
+offset_right = 774.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+theme_override_colors/font_outline_color = Color(0.7921569, 0.7921569, 0.7921569, 0.03529412)
+theme_override_colors/font_placeholder_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_colors/selection_color = Color(0.7921569, 0.7921569, 0.7921569, 0.03529412)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_esnmb")
+placeholder_text = "Username"
+
+[node name="LogIn" type="Button" parent="Background2" unique_id=1191915709]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 534.0
+offset_right = 442.0
+offset_bottom = 561.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+
+[node name="continue" type="Button" parent="Background2" unique_id=585970412]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 277.0
+offset_right = 896.0
+offset_bottom = 314.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mv22g")
+
+[node name="Background3" type="TextureRect" parent="." unique_id=498259761]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4p73a")
+expand_mode = 1
+
+[node name="account" type="Button" parent="Background3" unique_id=314092342]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 284.0
+offset_right = 754.0
+offset_bottom = 321.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+
+[node name="Background4" type="TextureRect" parent="." unique_id=1489215475]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_mv22g")
+expand_mode = 1
+
+[node name="PasswordFinal" type="LineEdit" parent="Background4" unique_id=1184675636]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 291.0
+offset_right = 785.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_colors/font_placeholder_color = Color(0.7921569, 0.7921569, 0.7921569, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_esnmb")
+placeholder_text = "Password"
+secret = true
+
+[node name="sign-in" type="Button" parent="Background4" unique_id=1579228645]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 432.0
+offset_right = 813.0
+offset_bottom = 463.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
+
+[node name="LoseScreen" type="CanvasLayer" parent="." unique_id=348165981]
+visible = false
+
+[node name="Label" type="Label" parent="LoseScreen" unique_id=944277910]
+offset_left = 381.0
+offset_top = 32.0
+offset_right = 854.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Account Lost Forever..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="LoseScreen" unique_id=1245922099]
+offset_left = 476.0
+offset_top = 95.0
+offset_right = 734.0
+offset_bottom = 141.0
+text = "Unless you try again :)"
+
+[node name="WinScreen" type="CanvasLayer" parent="." unique_id=1341648231]
+visible = false
+
+[node name="Label" type="Label" parent="WinScreen" unique_id=1791793728]
+offset_left = 317.0
+offset_top = 103.0
+offset_right = 926.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "You Recovered Your Account!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=309229491]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=794429688]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Background1/LogIn" to="." method="_on_log_in_pressed"]
+[connection signal="pressed" from="Background1/LogIn" to="." method="_on_log_in_1_pressed"]
+[connection signal="pressed" from="Background1/continue1" to="." method="_on_continue_1_pressed"]
+[connection signal="pressed" from="Background1/continue1" to="." method="_on_log_in_pressed"]
+[connection signal="pressed" from="Background1/continue1" to="." method="_on_log_in_1_pressed"]
+[connection signal="pressed" from="Background2/LogIn" to="." method="_on_log_in_pressed"]
+[connection signal="pressed" from="Background2/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Background3/account" to="." method="_on_account_pressed"]
+[connection signal="pressed" from="Background4/sign-in" to="." method="_on_signin_pressed"]
+[connection signal="pressed" from="LoseScreen/retry" to="." method="_on_retry_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
