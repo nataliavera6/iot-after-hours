@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dhvoj8ikp0ybx" path="res://assets/free-field-enemies-pixel-art-for-tower-defense/2/U_Walk.png" id="4_5abox"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_81u3t"]
+radius = 5.6373944
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vd5x3"]
 atlas = ExtResource("2_81u3t")
@@ -153,19 +154,21 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vd5x3"]
-radius = 20.024984
+radius = 10.671574
 
-[node name="Orc" unique_id=1585025158 instance=ExtResource("1_sfdtf")]
+[node name="Orc" unique_id=1585025158 groups=["enemy_group"] instance=ExtResource("1_sfdtf")]
 script = ExtResource("2_5abox")
 
-[node name="CollisionShape2D" parent="." index="0" unique_id=172922420]
+[node name="CollisionShape2D" parent="." index="0" unique_id=172922420 groups=["enemy_group"]]
 shape = SubResource("CircleShape2D_81u3t")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=1829277219]
 modulate = Color(1, 1, 1, 0.4117647)
-position = Vector2(0, -5)
+position = Vector2(1.609658, -5)
 sprite_frames = SubResource("SpriteFrames_sfdtf")
-animation = &"walk-slide"
+animation = &"walk-down"
 
-[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1062247069) index="0" unique_id=1436985753]
+[node name="Area2D" parent="." index="2" unique_id=1062247069 groups=["enemy_group"]]
+
+[node name="CollisionShape2D" parent="Area2D" index="0" unique_id=1436985753 groups=["enemy_group"]]
 shape = SubResource("CircleShape2D_vd5x3")

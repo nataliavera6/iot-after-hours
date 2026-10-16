@@ -1,6 +1,9 @@
 extends Node2D
-
+@export var enemy_scene: PackedScene
+@onready var spawn_timer: Timer = $"enemy timer"
+@onready var spawn_point: Marker2D = $Marker2D
 var active: String ="snack_restock"
+var enemy_count: int= 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$SnackRestock.process_mode = Node.PROCESS_MODE_DISABLED
@@ -9,7 +12,9 @@ func _ready() -> void:
 	$MicrowavePuzzle.process_mode = Node.PROCESS_MODE_DISABLED
 	$PizarraPuzzle.process_mode=Node.PROCESS_MODE_DISABLED
 	$WiresPuzzle.process_mode = Node.PROCESS_MODE_DISABLED
-	
+	spawn_enemy()
+	spawn_timer.timeout.connect(spawn_enemy)
+	spawn_timer.start()
 	
 	
 	
@@ -56,7 +61,7 @@ func _on_login_puzzle_login_won() -> void:
 	get_tree().paused=false
 	$login.hide()
 	$microwave.show()
-	active =="microwave"
+	active ="microwave"
 
 
 #/////////////////////////////////////
@@ -73,7 +78,7 @@ func _on_microwave_puzzle_microwave_win() -> void:
 	get_tree().paused=false
 	$microwave.hide()
 	$document.show()
-	active =="document"
+	active ="document"
 	
 #///////////////////////////////
 
@@ -90,7 +95,7 @@ func _on_document_puzzle_document_win() -> void:
 	get_tree().paused=false
 	$document.hide()
 	$pizarra.show()
-	active =="pizarra"
+	active ="pizarra"
 #/////////////////////////
 func _on_pizarra_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") && active=="pizarra":
@@ -105,7 +110,7 @@ func _on_pizarra_puzzle_pizarra_win() -> void:
 	get_tree().paused=false
 	$pizarra.hide()
 	$circuit.show()
-	active =="circuit"
+	active ="circuit"
 	
 #///////////
 func _on_circuit_body_entered(body: Node2D) -> void:
@@ -121,4 +126,17 @@ func _on_wires_puzzle_circuit_win() -> void:
 	$WiresPuzzle.hide()
 	get_tree().paused=false
 	$circuit.hide()
-	active =="win"
+	active ="win"
+	get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
+
+func spawn_enemy() -> void:
+	
+	if enemy_scene == null:
+		return
+	var enemy = enemy_scene.instantiate()
+
+	get_parent().add_child(enemy)
+	enemy.global_position = spawn_point.global_position
+	enemy_count+=1
+	if enemy_count >=3:
+		$"enemy timer".stop()

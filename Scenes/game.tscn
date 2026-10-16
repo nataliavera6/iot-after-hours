@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://wp4bxhujcbjw" path="res://Scenes/game.gd" id="1_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://bmqlwhekg3p6b" path="res://Scenes/LabLayout.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dot7np55l62vb" path="res://Scenes/pizarraPuzzle.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://bp8gafbthycve" path="res://Scenes/orc.tscn" id="2_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://gnu2c3wxmaiq" path="res://Scenes/login-puzzle.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://4131v77lpnof" path="res://Scenes/document-puzzle.tscn" id="6_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://6olc4qi6ett4" path="res://Scenes/microwave-puzzle.tscn" id="7_o5yvi"]
@@ -30,7 +31,7 @@ atlas = ExtResource("11_o5yvi")
 region = Rect2(742.13074, 673.4888, 57.053894, 48.999268)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu6no"]
-size = Vector2(152.29358, 87.06424)
+size = Vector2(199.14679, 87.06424)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4p73a"]
 atlas = ExtResource("10_ldgsr")
@@ -55,6 +56,7 @@ size = Vector2(71.19992, 35.675667)
 
 [node name="Game" type="Node2D" unique_id=106238846]
 script = ExtResource("1_h4fw4")
+enemy_scene = ExtResource("2_rfjv2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2048161342]
 offset_right = 1296.0
@@ -127,7 +129,7 @@ scale = Vector2(1.9063648, 1.8218555)
 texture = SubResource("AtlasTexture_o5yvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="microwave" unique_id=906649717]
-position = Vector2(1.0366974, -0.76145935)
+position = Vector2(-22.389893, -0.76145935)
 shape = SubResource("RectangleShape2D_tu6no")
 
 [node name="document" type="Area2D" parent="." unique_id=1656193767]
@@ -176,6 +178,13 @@ flip_h = true
 position = Vector2(-10.026947, -0.51893616)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_vrt1p")
+
+[node name="enemy timer" type="Timer" parent="." unique_id=970260282]
+wait_time = 5.0
+autostart = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=918717336]
+position = Vector2(1096, 675)
 
 [connection signal="pizarra_win" from="PizarraPuzzle" to="." method="_on_pizarra_puzzle_pizarra_win"]
 [connection signal="login_won" from="LoginPuzzle" to="." method="_on_login_puzzle_login_won"]

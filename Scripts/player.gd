@@ -31,3 +31,18 @@ func _physics_process(_delta: float) -> void:
 
 	#move and stop at walls
 	move_and_slide()
+
+
+		
+	
+
+
+
+		
+		
+
+
+#func _on_area_2d_body_entered(body: Node2D) -> void:
+	#if body.get_parent().is_in_group("enemy_group"):
+			#print("monster in")
+			#get_tree().change_scene_to_file("res://Scenes/LoseScreen.tscn")
