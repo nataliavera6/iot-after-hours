@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://chgu1sf5flgyx"]
+
+[ext_resource type="Script" uid="uid://br8yakbhv6e6b" path="res://Scripts/instructions.gd" id="1_dxknu"]
+[ext_resource type="Texture2D" uid="uid://cprtqcp35efpd" path="res://assets/iot_paper-removebg-preview.png" id="2_5doqj"]
+[ext_resource type="Texture2D" uid="uid://cvue5yijp7trv" path="res://assets/E-Key.png" id="3_s7gfc"]
+[ext_resource type="Script" uid="uid://ck4g4k5gt7mtk" path="res://Scripts/e_sprite.gd" id="4_v8bcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
+size = Vector2(111, 133)
+
+[node name="Instructions" type="Area2D" unique_id=955272529]
+collision_layer = 0
+script = ExtResource("1_dxknu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938168337]
+position = Vector2(-27.5, -1)
+shape = SubResource("RectangleShape2D_6tu7v")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=775895703]
+visible = false
+anchors_preset = -1
+anchor_left = -0.15546875
+anchor_top = -0.33194444
+anchor_right = 1.2976563
+anchor_bottom = 1.3472222
+offset_left = -988.0
+offset_top = -488.0
+offset_right = -368.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("2_5doqj")
+
+[node name="E_sprite" type="Sprite2D" parent="." unique_id=1938537524]
+visible = false
+position = Vector2(-30, -73)
+scale = Vector2(1.9062499, 2.0357146)
+texture = ExtResource("3_s7gfc")
+region_enabled = true
+region_rect = Rect2(0, 3.9936657, 32.905632, 28.006334)
+script = ExtResource("4_v8bcc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
