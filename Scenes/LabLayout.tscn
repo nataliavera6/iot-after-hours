@@ -6899,4 +6899,5 @@ position = Vector2(289, 12)
 shape = SubResource("RectangleShape2D_ei1b0")
 
 [node name="Instructions" parent="." unique_id=955272529 instance=ExtResource("6_snga1")]
+z_index = 2
 position = Vector2(960, 458)
