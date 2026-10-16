@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://b6htxs317v6id" path="res://assets/base/lab_tileset_base.png" id="1_w0dhx"]
 [ext_resource type="Texture2D" uid="uid://bnnchi8v4fa17" path="res://assets/IMG_0499.PNG" id="2_61dj5"]
 [ext_resource type="Texture2D" uid="uid://maiwpxma4qhg" path="res://assets/miniffridge1.png" id="4_w0fs2"]
-[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="5_w0fs2"]
 [ext_resource type="Texture2D" uid="uid://cuivtnfn4psb4" path="res://assets/SpriteSheet.png" id="6_ge52r"]
 [ext_resource type="PackedScene" uid="uid://chgu1sf5flgyx" path="res://Scenes/instructions.tscn" id="6_snga1"]
 
@@ -6898,10 +6897,6 @@ position = Vector2(333, 579)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=293183214]
 position = Vector2(289, 12)
 shape = SubResource("RectangleShape2D_ei1b0")
-
-[node name="Player" parent="." unique_id=2109834062 instance=ExtResource("5_w0fs2")]
-position = Vector2(367, 249)
-scale = Vector2(3, 3)
 
 [node name="Instructions" parent="." unique_id=955272529 instance=ExtResource("6_snga1")]
 position = Vector2(960, 458)

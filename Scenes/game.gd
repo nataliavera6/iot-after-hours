@@ -57,6 +57,9 @@ func _on_login_puzzle_login_won() -> void:
 	$login.hide()
 	$microwave.show()
 	active =="microwave"
+	
+	if active == "microwave":
+		print("microonda lol")
 
 
 #/////////////////////////////////////

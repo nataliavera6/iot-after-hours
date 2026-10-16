@@ -33,6 +33,7 @@ func _on_account_pressed() -> void:
 func _on_signin_pressed() -> void:
 	if $Background4/PasswordFinal.text=="Alfred da Butt-ler":
 		login_won.emit()
+		print($Background4/PasswordFinal.text)
 		$Timer.stop()
 		
 		

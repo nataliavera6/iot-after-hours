@@ -159,13 +159,17 @@ radius = 20.024984
 script = ExtResource("2_5abox")
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=172922420]
+visible = false
 shape = SubResource("CircleShape2D_81u3t")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=1829277219]
-modulate = Color(1, 1, 1, 0.4117647)
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_sfdtf")
-animation = &"walk-slide"
+animation = &"walk-down"
 
-[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1062247069) index="0" unique_id=1436985753]
+[node name="Area2D" parent="." index="2" unique_id=1062247069]
+visible = false
+
+[node name="CollisionShape2D" parent="Area2D" index="0" unique_id=1436985753]
+visible = false
 shape = SubResource("CircleShape2D_vd5x3")

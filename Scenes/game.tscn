@@ -30,7 +30,7 @@ atlas = ExtResource("11_o5yvi")
 region = Rect2(742.13074, 673.4888, 57.053894, 48.999268)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu6no"]
-size = Vector2(152.29358, 87.06424)
+size = Vector2(211.99084, 87.06424)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4p73a"]
 atlas = ExtResource("10_ldgsr")
@@ -127,7 +127,7 @@ scale = Vector2(1.9063648, 1.8218555)
 texture = SubResource("AtlasTexture_o5yvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="microwave" unique_id=906649717]
-position = Vector2(1.0366974, -0.76145935)
+position = Vector2(-28.812012, -0.76145935)
 shape = SubResource("RectangleShape2D_tu6no")
 
 [node name="document" type="Area2D" parent="." unique_id=1656193767]
