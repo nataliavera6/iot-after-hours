@@ -163,7 +163,6 @@ script = ExtResource("2_5abox")
 shape = SubResource("CircleShape2D_81u3t")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=1829277219]
-modulate = Color(1, 1, 1, 0.4117647)
 position = Vector2(1.609658, -5)
 sprite_frames = SubResource("SpriteFrames_sfdtf")
 animation = &"walk-down"

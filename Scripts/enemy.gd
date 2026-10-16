@@ -35,7 +35,5 @@ func die():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	#make sure its the player
 	if area.is_in_group("player") and area.get_parent().name == "Player":
-		#for now just a print
 		print("Player got hit")
-		get_tree().paused
-		get_tree().change_scene_to_file("res://Scenes/LoseScreen.tscn")
+		get_tree().change_scene_to_file.call_deferred("res://Scenes/LoseScreen.tscn")
