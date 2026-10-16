@@ -44,9 +44,10 @@ func _drop():
 	z_index = 0
 
 	for area in get_overlapping_areas():
-		if area.category == category:
-			_place()
-			return
+		if "category" in area:
+			if area.category == category:
+				_place()
+				return
 			
 	_return_to_start()
 

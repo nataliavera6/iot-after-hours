@@ -2,6 +2,7 @@ class_name SnackRestock
 extends CanvasLayer
 
 signal finished(won : bool)
+signal won_fridge
 @export var time_limit : float = 30
 
 @onready var shelves : Node2D = $Shelfs
@@ -13,12 +14,13 @@ var total = 0
 var sorted_count = 0
 
 func _process(delta: float) -> void:
-	var seconds = int(ceil($Timer.time_left))
+	var seconds = int(ceil($snack_Timer.time_left))
 	timer_label.text = str(seconds) + "s"
 
 func _ready() -> void:
+	print("ready")
 	total = snacks.get_child_count()
-	$Timer.start()
+	#$snack_Timer.start()
 	randomize_shelves()
 	connect_sorted()
 	#just make sure the counter its correct
@@ -50,6 +52,8 @@ func _on_snack_sorted():
 	#win condition
 	if sorted_count>=total:
 		print("Win state")
+		won_fridge.emit()
+
 
 func update_counter():
 	counter_label.text = "Sorted: %d / %d" % [sorted_count, total]
@@ -59,4 +63,8 @@ func _on_timer_timeout() -> void:
 	_lose()
 	
 func _lose():
-	print("U lose")	
+	print("U lose")
+
+	
+
+	
