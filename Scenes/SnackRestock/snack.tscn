@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://mcylpv6cbsw3"]
+
+[ext_resource type="Script" uid="uid://cfarl0tnyd11q" path="res://Scripts/SnackRestockFolder/snack.gd" id="1_26ynn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tu7v"]
+
+[node name="Snack" type="Area2D" unique_id=1574886783]
+position = Vector2(154, 115)
+script = ExtResource("1_26ynn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321958576]
+shape = SubResource("RectangleShape2D_6tu7v")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

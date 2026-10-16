@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://bgmubb6beo8x0"]
 
-[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_7c5c0"]
-[ext_resource type="PackedScene" uid="uid://bp8gafbthycve" path="res://Scenes/orc.tscn" id="2_8k5ys"]
+[ext_resource type="PackedScene" uid="uid://mcylpv6cbsw3" path="res://Scenes/SnackRestock/snack.tscn" id="1_8k5ys"]
+[ext_resource type="PackedScene" uid="uid://0n7p714g8c3i" path="res://Scenes/SnackRestock/shelf.tscn" id="2_pnn7r"]
 
 [node name="Test" type="Node2D" unique_id=1707519722]
 
-[node name="Orc" parent="." unique_id=1585025158 instance=ExtResource("2_8k5ys")]
-position = Vector2(137, 19)
-collision_layer = 1
+[node name="Snack" parent="." unique_id=1574886783 instance=ExtResource("1_8k5ys")]
+position = Vector2(130, 155)
 
-[node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_7c5c0")]
-position = Vector2(156, 81)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1899855884]
-zoom = Vector2(3, 3)
+[node name="Shelf" parent="." unique_id=551785758 instance=ExtResource("2_pnn7r")]
+position = Vector2(119, 15)
+scale = Vector2(4.02921, 3.6964788)
