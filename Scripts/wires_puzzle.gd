@@ -1,6 +1,6 @@
 class_name WiresPuzzle
 extends CanvasLayer
-
+signal circuit_win
 signal finished(won : bool)
 
 const COLORS : Array[Color] = [Color.RED, Color.DODGER_BLUE, Color.YELLOW, Color.MAGENTA]
@@ -108,6 +108,7 @@ func connect_wire(target: Node2D):
 
 func _win():
 	print("Win state")
+	circuit_win.emit()
 	finished.emit(true)
 
 #lose condition
