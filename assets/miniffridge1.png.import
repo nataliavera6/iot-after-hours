@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uw3n3eapnrdb"
-path="res://.godot/imported/clipboard.png-fb7ba63108512a0a6be44575f8c43f7d.ctex"
+uid="uid://maiwpxma4qhg"
+path="res://.godot/imported/miniffridge1.png-478e683924799650e5df409ed70b0ba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/base/clipboard.png"
-dest_files=["res://.godot/imported/clipboard.png-fb7ba63108512a0a6be44575f8c43f7d.ctex"]
+source_file="res://assets/miniffridge1.png"
+dest_files=["res://.godot/imported/miniffridge1.png-478e683924799650e5df409ed70b0ba0.ctex"]
 
 [params]
 
