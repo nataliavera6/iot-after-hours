@@ -129,14 +129,17 @@ func _on_wires_puzzle_circuit_win() -> void:
 	active ="win"
 	get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 
+
 func spawn_enemy() -> void:
-	
 	if enemy_scene == null:
 		return
+
 	var enemy = enemy_scene.instantiate()
 
 	add_child.call_deferred(enemy)
 	enemy.global_position = spawn_point.global_position
-	enemy_count+=1
-	if enemy_count >=3:
-		$"enemy timer".stop()
+
+	enemy_count += 1
+
+	if enemy_count >= 3:
+		spawn_timer.stop()
