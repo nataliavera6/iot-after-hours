@@ -378,7 +378,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tdd5b"]
 height = 28.0
 
-[node name="Player" type="Area2D" unique_id=2109834062]
+[node name="Player" type="CharacterBody2D" unique_id=496585608]
 script = ExtResource("1_vgqql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1724490940]
