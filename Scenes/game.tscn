@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bdaeus5eg36be" path="res://assets/minifridge.png" id="9_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://bnnchi8v4fa17" path="res://assets/IMG_0499.PNG" id="10_ldgsr"]
 [ext_resource type="Texture2D" uid="uid://cuivtnfn4psb4" path="res://assets/SpriteSheet.png" id="11_o5yvi"]
-[ext_resource type="Texture2D" uid="uid://dfwl8p3s4csfk" path="res://assets/base/clipboard copy 3.png" id="12_rku1e"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2poj3"]
 
@@ -32,6 +31,10 @@ region = Rect2(742.13074, 673.4888, 57.053894, 48.999268)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu6no"]
 size = Vector2(152.29358, 87.06424)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p73a"]
+atlas = ExtResource("10_ldgsr")
+region = Rect2(204.61133, 16.975304, 117.46948, 117.02776)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nj65"]
 size = Vector2(103.578, 126.51373)
@@ -129,14 +132,14 @@ shape = SubResource("RectangleShape2D_tu6no")
 
 [node name="document" type="Area2D" parent="." unique_id=1656193767]
 visible = false
-position = Vector2(886.23, 441.48)
-scale = Vector2(1.09, 1.09)
+position = Vector2(698.82, 170.85)
+scale = Vector2(2.33, 2.33)
 
 [node name="Sprite2D" type="Sprite2D" parent="document" unique_id=38409980]
 modulate = Color(0.31415284, 0.55274683, 0, 1)
 position = Vector2(-0.7981415, -1.6788483)
 scale = Vector2(0.505, 0.482)
-texture = ExtResource("12_rku1e")
+texture = SubResource("AtlasTexture_4p73a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="document" unique_id=239219976]
 position = Vector2(1.0366821, 1.0734205)
