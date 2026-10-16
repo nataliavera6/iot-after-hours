@@ -32,7 +32,6 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.7704389, 3.706068e-06, 4.813075e-07, 1)
 theme_override_fonts/font = ExtResource("2_aesal")
 theme_override_font_sizes/font_size = 100
-text = "6x - 3 = 15"
 horizontal_alignment = 1
 vertical_alignment = 1
 

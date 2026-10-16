@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://brwd01ylhk7cn"]
+[gd_scene format=3 uid="uid://4131v77lpnof"]
 
-[ext_resource type="Texture2D" path="res://assets/documents-puzzle/document-puzzle-background.png" id="1_fl46e"]
-[ext_resource type="Script" path="res://Scenes/document_puzzle.gd" id="1_xcubn"]
-[ext_resource type="Texture2D" path="res://assets/documents-puzzle/pdf_icon.png" id="2_emj5i"]
-[ext_resource type="Script" path="res://Scenes/math_file_1.gd" id="2_iktyu"]
-[ext_resource type="Texture2D" path="res://assets/documents-puzzle/doc_icon.png" id="3_pyae5"]
-[ext_resource type="Texture2D" path="res://assets/documents-puzzle/png_icon.png" id="4_iktyu"]
+[ext_resource type="Texture2D" uid="uid://hwydtfuddcig" path="res://assets/documents-puzzle/document-puzzle-background.png" id="1_fl46e"]
+[ext_resource type="Script" uid="uid://dx2rgcs6bjbex" path="res://Scenes/document_puzzle.gd" id="1_xcubn"]
+[ext_resource type="Texture2D" uid="uid://bmuf7c3ugofon" path="res://assets/documents-puzzle/pdf_icon.png" id="2_emj5i"]
+[ext_resource type="Script" uid="uid://dr8rfhtberv54" path="res://Scenes/math_file_1.gd" id="2_iktyu"]
+[ext_resource type="Texture2D" uid="uid://b27weisjqlu20" path="res://assets/documents-puzzle/doc_icon.png" id="3_pyae5"]
+[ext_resource type="Texture2D" uid="uid://di153h8hf3o8x" path="res://assets/documents-puzzle/png_icon.png" id="4_iktyu"]
 
 [node name="DocumentPuzzle" type="CanvasLayer" unique_id=437577043]
 script = ExtResource("1_xcubn")
