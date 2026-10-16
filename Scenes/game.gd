@@ -1,6 +1,6 @@
 extends Node2D
 
-var active: String ="pizarra"
+var active: String ="snack_restock"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$SnackRestock.process_mode = Node.PROCESS_MODE_DISABLED
@@ -55,6 +55,7 @@ func _on_login_puzzle_login_won() -> void:
 	$LoginPuzzle.hide()
 	get_tree().paused=false
 	$login.hide()
+	$microwave.show()
 	active =="microwave"
 
 
@@ -71,6 +72,7 @@ func _on_microwave_puzzle_microwave_win() -> void:
 	$MicrowavePuzzle.hide()
 	get_tree().paused=false
 	$microwave.hide()
+	$document.show()
 	active =="document"
 	
 #///////////////////////////////
@@ -87,6 +89,7 @@ func _on_document_puzzle_document_win() -> void:
 	$DocumentPuzzle.hide()
 	get_tree().paused=false
 	$document.hide()
+	$pizarra.show()
 	active =="pizarra"
 #/////////////////////////
 func _on_pizarra_body_entered(body: Node2D) -> void:
@@ -101,6 +104,7 @@ func _on_pizarra_puzzle_pizarra_win() -> void:
 	$PizarraPuzzle.hide()
 	get_tree().paused=false
 	$pizarra.hide()
+	$circuit.show()
 	active =="circuit"
 	
 #///////////
@@ -110,3 +114,11 @@ func _on_circuit_body_entered(body: Node2D) -> void:
 		$WiresPuzzle.show()
 		get_tree().paused=true
 		
+
+
+func _on_wires_puzzle_circuit_win() -> void:
+	$WiresPuzzle.process_mode = Node.PROCESS_MODE_DISABLED
+	$WiresPuzzle.hide()
+	get_tree().paused=false
+	$circuit.hide()
+	active =="win"

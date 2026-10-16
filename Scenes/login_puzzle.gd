@@ -32,8 +32,9 @@ func _on_account_pressed() -> void:
 
 func _on_signin_pressed() -> void:
 	if $Background4/PasswordFinal.text=="Alfred da Butt-ler":
-		$Timer.stop()
 		login_won.emit()
+		$Timer.stop()
+		
 		
 	else:
 		print("showing lose")

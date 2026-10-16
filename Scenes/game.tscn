@@ -43,8 +43,12 @@ region = Rect2(823.28516, 618.0745, 171.12134, 255.94696)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2hde"]
 size = Vector2(93.48627, 100.825714)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb51f"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(637.619, 795.80334, 112.82373, 76.79083)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrt1p"]
-size = Vector2(485.5769, 323.55774)
+size = Vector2(71.19992, 35.675667)
 
 [node name="Game" type="Node2D" unique_id=106238846]
 script = ExtResource("1_h4fw4")
@@ -94,6 +98,7 @@ shape = SubResource("RectangleShape2D_tdd5b")
 debug_color = Color(0.93486667, 2.05037e-05, 0.64085263, 0.41960785)
 
 [node name="login" type="Area2D" parent="." unique_id=1172924910]
+visible = false
 position = Vector2(697.8, 168.68)
 scale = Vector2(1.09, 1.09)
 
@@ -107,11 +112,12 @@ position = Vector2(1.037, 1.429)
 shape = SubResource("RectangleShape2D_ejaxc")
 
 [node name="microwave" type="Area2D" parent="." unique_id=1552494138]
+visible = false
 position = Vector2(1224.94, 236.66)
 scale = Vector2(1.09, 1.09)
 
 [node name="Sprite2D" type="Sprite2D" parent="microwave" unique_id=1485445280]
-modulate = Color(0.87144196, 0.14742184, 0, 1)
+modulate = Color(0.3068816, 0.62910515, 3.85046e-07, 1)
 position = Vector2(0.11929321, 1.0734062)
 rotation = 1.5707964
 scale = Vector2(1.9063648, 1.8218555)
@@ -122,6 +128,7 @@ position = Vector2(1.0366974, -0.76145935)
 shape = SubResource("RectangleShape2D_tu6no")
 
 [node name="document" type="Area2D" parent="." unique_id=1656193767]
+visible = false
 position = Vector2(886.23, 441.48)
 scale = Vector2(1.09, 1.09)
 
@@ -136,6 +143,7 @@ position = Vector2(1.0366821, 1.0734205)
 shape = SubResource("RectangleShape2D_3nj65")
 
 [node name="pizarra" type="Area2D" parent="." unique_id=1287245512]
+visible = false
 position = Vector2(185.43, 604.29)
 scale = Vector2(2.08, 2.08)
 
@@ -150,16 +158,20 @@ position = Vector2(0.31153107, -0.26790547)
 shape = SubResource("RectangleShape2D_v2hde")
 
 [node name="circuit" type="Area2D" parent="." unique_id=1793072142]
-position = Vector2(1091.69, 505.96)
-scale = Vector2(0.35, 0.35)
+visible = false
+position = Vector2(1226.28, 467.76)
+scale = Vector2(2.68, 2.68)
 
 [node name="Sprite2D" type="Sprite2D" parent="circuit" unique_id=1796553951]
 modulate = Color(0.31415284, 0.55274683, 0, 1)
 position = Vector2(0.31152344, -0.2679119)
-scale = Vector2(0.505, 0.482)
+scale = Vector2(0.495, 0.462)
+texture = SubResource("AtlasTexture_nb51f")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="circuit" unique_id=2124862558]
-position = Vector2(-10.542816, 11.542892)
+position = Vector2(-10.026947, -0.51893616)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_vrt1p")
 
 [connection signal="pizarra_win" from="PizarraPuzzle" to="." method="_on_pizarra_puzzle_pizarra_win"]
@@ -168,6 +180,7 @@ shape = SubResource("RectangleShape2D_vrt1p")
 [connection signal="microwave_win" from="MicrowavePuzzle" to="." method="_on_microwave_puzzle_microwave_win"]
 [connection signal="finished" from="SnackRestock" to="." method="_on_snack_restock_finished"]
 [connection signal="won_fridge" from="SnackRestock" to="." method="_on_snack_restock_won_fridge"]
+[connection signal="circuit_win" from="WiresPuzzle" to="." method="_on_wires_puzzle_circuit_win"]
 [connection signal="body_entered" from="fridge" to="." method="_on_fridge_body_entered"]
 [connection signal="body_entered" from="login" to="." method="_on_login_body_entered"]
 [connection signal="body_entered" from="microwave" to="." method="_on_microwave_body_entered"]
