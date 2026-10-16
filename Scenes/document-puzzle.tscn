@@ -1,0 +1,375 @@
+[gd_scene format=3 uid="uid://brwd01ylhk7cn"]
+
+[ext_resource type="Texture2D" path="res://assets/documents-puzzle/document-puzzle-background.png" id="1_fl46e"]
+[ext_resource type="Script" path="res://Scenes/document_puzzle.gd" id="1_xcubn"]
+[ext_resource type="Texture2D" path="res://assets/documents-puzzle/pdf_icon.png" id="2_emj5i"]
+[ext_resource type="Script" path="res://Scenes/math_file_1.gd" id="2_iktyu"]
+[ext_resource type="Texture2D" path="res://assets/documents-puzzle/doc_icon.png" id="3_pyae5"]
+[ext_resource type="Texture2D" path="res://assets/documents-puzzle/png_icon.png" id="4_iktyu"]
+
+[node name="DocumentPuzzle" type="CanvasLayer" unique_id=437577043]
+script = ExtResource("1_xcubn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=960878729]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fl46e")
+expand_mode = 1
+
+[node name="LiteratureLabel" type="Label" parent="." unique_id=1369227502]
+offset_left = 181.0
+offset_top = 304.0
+offset_right = 383.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Literature"
+horizontal_alignment = 1
+
+[node name="MathLabel" type="Label" parent="." unique_id=1486821828]
+offset_left = 543.0
+offset_top = 300.0
+offset_right = 745.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Math"
+horizontal_alignment = 1
+
+[node name="TrashLabel" type="Label" parent="." unique_id=1233272127]
+offset_left = 862.0
+offset_top = 305.0
+offset_right = 1064.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Trash"
+horizontal_alignment = 1
+
+[node name="MathFile1" type="Control" parent="." unique_id=1347703772]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Math"
+
+[node name="icon" type="TextureRect" parent="MathFile1" unique_id=1474471935]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 402.0
+offset_right = 392.0
+offset_bottom = 502.0
+texture = ExtResource("2_emj5i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MathFile1" unique_id=480998938]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 488.0
+offset_right = 432.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "preca_homework.pdf"
+horizontal_alignment = 1
+
+[node name="MathFile2" type="Control" parent="." unique_id=1705208553]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Math"
+
+[node name="icon" type="TextureRect" parent="MathFile2" unique_id=1295502555]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 311.0
+offset_right = 528.0
+offset_bottom = 411.0
+texture = ExtResource("3_pyae5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MathFile2" unique_id=160869403]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 408.0
+offset_right = 557.0
+offset_bottom = 431.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "taller_1.2.doc"
+horizontal_alignment = 1
+
+[node name="MathFile3" type="Control" parent="." unique_id=1855164607]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Math"
+
+[node name="icon" type="TextureRect" parent="MathFile3" unique_id=1327939021]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 455.0
+offset_right = 892.0
+offset_bottom = 555.0
+texture = ExtResource("2_emj5i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MathFile3" unique_id=592814477]
+layout_mode = 0
+offset_left = 753.0
+offset_top = 544.0
+offset_right = 931.0
+offset_bottom = 567.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ecuaciones.pdf"
+horizontal_alignment = 1
+
+[node name="LiteratureFile1" type="Control" parent="." unique_id=1124635573]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Literature"
+
+[node name="icon" type="TextureRect" parent="LiteratureFile1" unique_id=1575993015]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 377.0
+offset_right = 671.0
+offset_bottom = 477.0
+texture = ExtResource("4_iktyu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LiteratureFile1" unique_id=2063332502]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 471.0
+offset_right = 712.0
+offset_bottom = 494.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "love_poems.png"
+horizontal_alignment = 1
+
+[node name="LiteratureFile2" type="Control" parent="." unique_id=1086890886]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Literature"
+
+[node name="icon" type="TextureRect" parent="LiteratureFile2" unique_id=1787305809]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 301.0
+offset_right = 260.0
+offset_bottom = 401.0
+texture = ExtResource("3_pyae5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LiteratureFile2" unique_id=1357936615]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 398.0
+offset_right = 292.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "essay_fixed.doc"
+horizontal_alignment = 1
+
+[node name="LiteratureFile3" type="Control" parent="." unique_id=1626569950]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Literature"
+
+[node name="icon" type="TextureRect" parent="LiteratureFile3" unique_id=1057534988]
+layout_mode = 0
+offset_left = 1017.0
+offset_top = 313.0
+offset_right = 1117.0
+offset_bottom = 413.0
+texture = ExtResource("3_pyae5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="LiteratureFile3" unique_id=788573951]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 403.0
+offset_right = 1148.0
+offset_bottom = 426.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "don_quijote.doc"
+horizontal_alignment = 1
+
+[node name="TrashFile1" type="Control" parent="." unique_id=321703412]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Trash"
+
+[node name="icon" type="TextureRect" parent="TrashFile1" unique_id=697637253]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 307.0
+offset_right = 867.0
+offset_bottom = 407.0
+texture = ExtResource("4_iktyu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TrashFile1" unique_id=1004737493]
+layout_mode = 0
+offset_left = 731.0
+offset_top = 396.0
+offset_right = 909.0
+offset_bottom = 419.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "fridge.png"
+horizontal_alignment = 1
+
+[node name="TrashFile2" type="Control" parent="." unique_id=1138119603]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Trash"
+
+[node name="icon" type="TextureRect" parent="TrashFile2" unique_id=54181031]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 431.0
+offset_right = 1047.0
+offset_bottom = 531.0
+texture = ExtResource("2_emj5i")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TrashFile2" unique_id=138406837]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 515.0
+offset_right = 1084.0
+offset_bottom = 538.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "grocery_receipt.pdf"
+horizontal_alignment = 1
+
+[node name="TrashFile3" type="Control" parent="." unique_id=291623679]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_right = 30.0
+offset_bottom = 40.0
+script = ExtResource("2_iktyu")
+correct_folder = "Trash"
+
+[node name="icon" type="TextureRect" parent="TrashFile3" unique_id=1768650859]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 446.0
+offset_right = 243.0
+offset_bottom = 546.0
+texture = ExtResource("4_iktyu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="TrashFile3" unique_id=2006256880]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 541.0
+offset_right = 281.0
+offset_bottom = 564.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "fan_fic.png"
+horizontal_alignment = 1
+
+[node name="MathDropZone" type="Control" parent="." unique_id=536864389]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 534.0
+offset_top = 122.0
+offset_right = 762.0
+offset_bottom = 296.0
+
+[node name="LiteratureDropZone" type="Control" parent="." unique_id=1993699476]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 171.0
+offset_top = 142.0
+offset_right = 406.0
+offset_bottom = 298.0
+
+[node name="TrashDropZone" type="Control" parent="." unique_id=293909042]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 902.0
+offset_top = 131.0
+offset_right = 1022.0
+offset_bottom = 307.0
+
+[node name="LoseScreen" type="Control" parent="." unique_id=496708991]
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 250.0
+offset_right = 290.0
+offset_bottom = 290.0
+
+[node name="Label" type="Label" parent="LoseScreen" unique_id=180514293]
+layout_mode = 0
+offset_left = 148.0
+offset_top = -253.0
+offset_right = 663.0
+offset_bottom = -105.0
+theme_override_colors/font_color = Color(0.8156863, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Wrong Folder! Try Again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="LoseScreen" unique_id=645944342]
+layout_mode = 0
+offset_left = 335.0
+offset_top = -132.0
+offset_right = 496.0
+offset_bottom = -82.0
+text = "Try Again"
+
+[node name="WinScreen" type="Control" parent="." unique_id=11647399]
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="WinScreen" unique_id=568097130]
+layout_mode = 0
+offset_left = 448.0
+offset_top = -18.0
+offset_right = 879.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(0.8156863, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Files Organized!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="LoseScreen/TryAgainButton" to="." method="_on_try_again_button_pressed"]
