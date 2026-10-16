@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cg87t1sjbhgej" path="res://assets/button.png" id="1_68w7f"]
 [ext_resource type="Script" uid="uid://bwocvgki6w117" path="res://Scripts/win_screen.gd" id="1_d8xbi"]
-[ext_resource type="Texture2D" uid="uid://dx38b5y8ulg5j" path="res://assets/WinScreen.png" id="2_82r0j"]
+[ext_resource type="Texture2D" uid="uid://1p3xjowj2pbh" path="res://assets/Your paragraph text.png" id="2_82r0j"]
 
 [node name="Win" type="Node" unique_id=1221203061]
 script = ExtResource("1_d8xbi")
