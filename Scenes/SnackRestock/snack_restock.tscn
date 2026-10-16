@@ -188,7 +188,7 @@ mouse_filter = 2
 color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=96928126]
-wait_time = 30.0
+wait_time = 90.0
 one_shot = true
 
 [node name="Control" type="Control" parent="." unique_id=99631647]

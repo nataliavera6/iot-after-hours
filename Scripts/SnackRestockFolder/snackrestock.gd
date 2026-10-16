@@ -14,7 +14,7 @@ var sorted_count = 0
 
 func _process(delta: float) -> void:
 	var seconds = int(ceil($Timer.time_left))
-	timer_label.text = str(seconds)
+	timer_label.text = str(seconds) + "s"
 
 func _ready() -> void:
 	total = snacks.get_child_count()
