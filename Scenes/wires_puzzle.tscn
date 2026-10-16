@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://mjakxkvjn8op"]
+
+[ext_resource type="Script" uid="uid://c5xnm0xkap6sk" path="res://Scripts/wires_puzzle.gd" id="1_y8vnf"]
+[ext_resource type="Texture2D" uid="uid://cstcjtmn51pse" path="res://assets/motherboard-removebg-preview.png" id="2_wo43e"]
+
+[node name="WiresPuzzle" type="CanvasLayer" unique_id=1428209999]
+script = ExtResource("1_y8vnf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1999822677]
+offset_left = -72.0
+offset_top = -16.0
+offset_right = 595.0
+offset_bottom = 358.0
+scale = Vector2(2, 2)
+mouse_filter = 2
+texture = ExtResource("2_wo43e")
+
+[node name="Wires" type="Node2D" parent="." unique_id=1294626981]
+
+[node name="LeftPlugs" type="Node2D" parent="." unique_id=1506230878]
+position = Vector2(40, 88)
+
+[node name="Plug" type="Node2D" parent="LeftPlugs" unique_id=1282486929]
+position = Vector2(312, 8)
+
+[node name="ColorRect" type="ColorRect" parent="LeftPlugs/Plug" unique_id=759404584]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug2" type="Node2D" parent="LeftPlugs" unique_id=1628463339]
+position = Vector2(888, 168)
+
+[node name="ColorRect" type="ColorRect" parent="LeftPlugs/Plug2" unique_id=785592573]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug3" type="Node2D" parent="LeftPlugs" unique_id=2087505772]
+position = Vector2(240, 304)
+
+[node name="ColorRect" type="ColorRect" parent="LeftPlugs/Plug3" unique_id=1014038077]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug4" type="Node2D" parent="LeftPlugs" unique_id=1094620509]
+position = Vector2(656, 480)
+
+[node name="ColorRect" type="ColorRect" parent="LeftPlugs/Plug4" unique_id=1394349399]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="RightPlugs" type="Node2D" parent="." unique_id=341123255]
+position = Vector2(328, 88)
+
+[node name="Plug" type="Node2D" parent="RightPlugs" unique_id=1066799783]
+position = Vector2(192, 176)
+
+[node name="ColorRect" type="ColorRect" parent="RightPlugs/Plug" unique_id=1452865901]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug2" type="Node2D" parent="RightPlugs" unique_id=238503218]
+position = Vector2(448, 136)
+
+[node name="ColorRect" type="ColorRect" parent="RightPlugs/Plug2" unique_id=1616342202]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug3" type="Node2D" parent="RightPlugs" unique_id=1371481171]
+position = Vector2(-136, 408)
+
+[node name="ColorRect" type="ColorRect" parent="RightPlugs/Plug3" unique_id=130981068]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Plug4" type="Node2D" parent="RightPlugs" unique_id=1082208942]
+position = Vector2(472, 376)
+
+[node name="ColorRect" type="ColorRect" parent="RightPlugs/Plug4" unique_id=873019503]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0

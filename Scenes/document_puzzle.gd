@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+signal document_win
 var correct_files = 0
 var total_files = 9
 
@@ -8,7 +8,7 @@ func file_sorted_correctly():
 	correct_files += 1
 
 	if correct_files == total_files:
-		$WinScreen.visible = true
+		document_win.emit()
 
 
 func file_sorted_wrong():

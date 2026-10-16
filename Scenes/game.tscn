@@ -1,19 +1,192 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://wp4bxhujcbjw" path="res://Scenes/game.gd" id="1_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://bmqlwhekg3p6b" path="res://Scenes/LabLayout.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dot7np55l62vb" path="res://Scenes/pizarraPuzzle.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://gnu2c3wxmaiq" path="res://Scenes/login-puzzle.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://4131v77lpnof" path="res://Scenes/document-puzzle.tscn" id="6_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://6olc4qi6ett4" path="res://Scenes/microwave-puzzle.tscn" id="7_o5yvi"]
+[ext_resource type="PackedScene" uid="uid://cdov58mjyxsgx" path="res://Scenes/SnackRestock/snack_restock.tscn" id="8_rku1e"]
+[ext_resource type="PackedScene" uid="uid://mjakxkvjn8op" path="res://Scenes/wires_puzzle.tscn" id="9_1phco"]
+[ext_resource type="Texture2D" uid="uid://bdaeus5eg36be" path="res://assets/minifridge.png" id="9_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://bnnchi8v4fa17" path="res://assets/IMG_0499.PNG" id="10_ldgsr"]
+[ext_resource type="Texture2D" uid="uid://cuivtnfn4psb4" path="res://assets/SpriteSheet.png" id="11_o5yvi"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2poj3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdd5b"]
+size = Vector2(38.823524, 39.705875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldgsr"]
+atlas = ExtResource("10_ldgsr")
+region = Rect2(212.33716, 17.106285, 106.3927, 107.71975)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejaxc"]
+size = Vector2(104.49542, 131.10089)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5yvi"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(742.13074, 673.4888, 57.053894, 48.999268)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tu6no"]
+size = Vector2(152.29358, 87.06424)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p73a"]
+atlas = ExtResource("10_ldgsr")
+region = Rect2(204.61133, 16.975304, 117.46948, 117.02776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nj65"]
+size = Vector2(103.578, 126.51373)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rku1e"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(823.28516, 618.0745, 171.12134, 255.94696)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2hde"]
+size = Vector2(93.48627, 100.825714)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb51f"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(637.619, 795.80334, 112.82373, 76.79083)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrt1p"]
+size = Vector2(71.19992, 35.675667)
+
 [node name="Game" type="Node2D" unique_id=106238846]
+script = ExtResource("1_h4fw4")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2048161342]
 offset_right = 1296.0
 offset_bottom = 735.0
 texture = SubResource("CanvasTexture_2poj3")
 
+[node name="Node2D" parent="." unique_id=1623143591 instance=ExtResource("1_wrm1d")]
+
 [node name="Player" parent="." unique_id=2109834062 instance=ExtResource("1_ebmjs")]
+position = Vector2(546, 235.00002)
 scale = Vector2(3, 3)
 
 [node name="PizarraPuzzle" parent="." unique_id=674923541 instance=ExtResource("2_qxrlw")]
+process_mode = 4
 visible = false
+
+[node name="LoginPuzzle" parent="." unique_id=137391248 instance=ExtResource("4_3dryh")]
+visible = false
+
+[node name="DocumentPuzzle" parent="." unique_id=437577043 instance=ExtResource("6_ldgsr")]
+visible = false
+
+[node name="MicrowavePuzzle" parent="." unique_id=1436151565 instance=ExtResource("7_o5yvi")]
+visible = false
+
+[node name="SnackRestock" parent="." unique_id=1110966314 instance=ExtResource("8_rku1e")]
+visible = false
+
+[node name="WiresPuzzle" parent="." unique_id=1428209999 instance=ExtResource("9_1phco")]
+visible = false
+
+[node name="fridge" type="Area2D" parent="." unique_id=893397173]
+position = Vector2(63.46, 245.88)
+scale = Vector2(3.4, 3.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="fridge" unique_id=1706272851]
+modulate = Color(0, 0.8776376, 0.0037773014, 1)
+texture = ExtResource("9_rfjv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fridge" unique_id=1723913422]
+position = Vector2(3.3941174, 1.0647049)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_tdd5b")
+debug_color = Color(0.93486667, 2.05037e-05, 0.64085263, 0.41960785)
+
+[node name="login" type="Area2D" parent="." unique_id=1172924910]
+visible = false
+position = Vector2(697.8, 168.68)
+scale = Vector2(1.09, 1.09)
+
+[node name="Sprite2D" type="Sprite2D" parent="login" unique_id=1623585093]
+modulate = Color(0, 0.8776376, 0.0037773014, 1)
+position = Vector2(1.0367022, 0.15597534)
+texture = SubResource("AtlasTexture_ldgsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="login" unique_id=1763291945]
+position = Vector2(1.037, 1.429)
+shape = SubResource("RectangleShape2D_ejaxc")
+
+[node name="microwave" type="Area2D" parent="." unique_id=1552494138]
+visible = false
+position = Vector2(1224.94, 236.66)
+scale = Vector2(1.09, 1.09)
+
+[node name="Sprite2D" type="Sprite2D" parent="microwave" unique_id=1485445280]
+modulate = Color(0.3068816, 0.62910515, 3.85046e-07, 1)
+position = Vector2(0.11929321, 1.0734062)
+rotation = 1.5707964
+scale = Vector2(1.9063648, 1.8218555)
+texture = SubResource("AtlasTexture_o5yvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="microwave" unique_id=906649717]
+position = Vector2(1.0366974, -0.76145935)
+shape = SubResource("RectangleShape2D_tu6no")
+
+[node name="document" type="Area2D" parent="." unique_id=1656193767]
+visible = false
+position = Vector2(698.82, 170.85)
+scale = Vector2(2.33, 2.33)
+
+[node name="Sprite2D" type="Sprite2D" parent="document" unique_id=38409980]
+modulate = Color(0.31415284, 0.55274683, 0, 1)
+position = Vector2(-0.7981415, -1.6788483)
+scale = Vector2(0.505, 0.482)
+texture = SubResource("AtlasTexture_4p73a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="document" unique_id=239219976]
+position = Vector2(1.0366821, 1.0734205)
+shape = SubResource("RectangleShape2D_3nj65")
+
+[node name="pizarra" type="Area2D" parent="." unique_id=1287245512]
+visible = false
+position = Vector2(185.43, 604.29)
+scale = Vector2(2.08, 2.08)
+
+[node name="Sprite2D" type="Sprite2D" parent="pizarra" unique_id=1110542206]
+modulate = Color(0.31415284, 0.55274683, 0, 1)
+position = Vector2(0.31152344, -0.2679119)
+scale = Vector2(0.505, 0.482)
+texture = SubResource("AtlasTexture_rku1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pizarra" unique_id=1639024077]
+position = Vector2(0.31153107, -0.26790547)
+shape = SubResource("RectangleShape2D_v2hde")
+
+[node name="circuit" type="Area2D" parent="." unique_id=1793072142]
+visible = false
+position = Vector2(1226.28, 467.76)
+scale = Vector2(2.68, 2.68)
+
+[node name="Sprite2D" type="Sprite2D" parent="circuit" unique_id=1796553951]
+modulate = Color(0.31415284, 0.55274683, 0, 1)
+position = Vector2(0.31152344, -0.2679119)
+scale = Vector2(0.495, 0.462)
+texture = SubResource("AtlasTexture_nb51f")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="circuit" unique_id=2124862558]
+position = Vector2(-10.026947, -0.51893616)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_vrt1p")
+
+[connection signal="pizarra_win" from="PizarraPuzzle" to="." method="_on_pizarra_puzzle_pizarra_win"]
+[connection signal="login_won" from="LoginPuzzle" to="." method="_on_login_puzzle_login_won"]
+[connection signal="document_win" from="DocumentPuzzle" to="." method="_on_document_puzzle_document_win"]
+[connection signal="microwave_win" from="MicrowavePuzzle" to="." method="_on_microwave_puzzle_microwave_win"]
+[connection signal="finished" from="SnackRestock" to="." method="_on_snack_restock_finished"]
+[connection signal="won_fridge" from="SnackRestock" to="." method="_on_snack_restock_won_fridge"]
+[connection signal="circuit_win" from="WiresPuzzle" to="." method="_on_wires_puzzle_circuit_win"]
+[connection signal="body_entered" from="fridge" to="." method="_on_fridge_body_entered"]
+[connection signal="body_entered" from="login" to="." method="_on_login_body_entered"]
+[connection signal="body_entered" from="microwave" to="." method="_on_microwave_body_entered"]
+[connection signal="body_entered" from="document" to="." method="_on_document_body_entered"]
+[connection signal="body_entered" from="pizarra" to="." method="_on_pizarra_body_entered"]
+[connection signal="body_entered" from="circuit" to="." method="_on_circuit_body_entered"]

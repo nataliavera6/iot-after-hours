@@ -15,7 +15,29 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mv22g"]
 
 [node name="LoginPuzzle" type="CanvasLayer" unique_id=137391248]
+process_mode = 4
 script = ExtResource("1_2gd5i")
+
+[node name="LoseScreen" type="CanvasLayer" parent="." unique_id=348165981]
+visible = false
+
+[node name="Label" type="Label" parent="LoseScreen" unique_id=944277910]
+offset_left = 381.0
+offset_top = 32.0
+offset_right = 854.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 43
+text = "Account Lost Forever..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="retry" type="Button" parent="LoseScreen" unique_id=1245922099]
+offset_left = 476.0
+offset_top = 95.0
+offset_right = 734.0
+offset_bottom = 141.0
+text = "Unless you try again :)"
 
 [node name="Background1" type="TextureRect" parent="." unique_id=2052262964]
 anchors_preset = 15
@@ -189,27 +211,6 @@ offset_right = 813.0
 offset_bottom = 463.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_gmybj")
 
-[node name="LoseScreen" type="CanvasLayer" parent="." unique_id=348165981]
-visible = false
-
-[node name="Label" type="Label" parent="LoseScreen" unique_id=944277910]
-offset_left = 381.0
-offset_top = 32.0
-offset_right = 854.0
-offset_bottom = 102.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 43
-text = "Account Lost Forever..."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="retry" type="Button" parent="LoseScreen" unique_id=1245922099]
-offset_left = 476.0
-offset_top = 95.0
-offset_right = 734.0
-offset_bottom = 141.0
-text = "Unless you try again :)"
-
 [node name="WinScreen" type="CanvasLayer" parent="." unique_id=1341648231]
 visible = false
 
@@ -234,15 +235,15 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
-[connection signal="pressed" from="Background1/LogIn" to="." method="_on_log_in_pressed"]
+[connection signal="pressed" from="LoseScreen/retry" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Background1/LogIn" to="." method="_on_log_in_1_pressed"]
+[connection signal="pressed" from="Background1/LogIn" to="." method="_on_log_in_pressed"]
+[connection signal="pressed" from="Background1/continue1" to="." method="_on_log_in_1_pressed"]
 [connection signal="pressed" from="Background1/continue1" to="." method="_on_continue_1_pressed"]
 [connection signal="pressed" from="Background1/continue1" to="." method="_on_log_in_pressed"]
-[connection signal="pressed" from="Background1/continue1" to="." method="_on_log_in_1_pressed"]
 [connection signal="pressed" from="Background2/LogIn" to="." method="_on_log_in_pressed"]
 [connection signal="pressed" from="Background2/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Background3/account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="Background4/sign-in" to="." method="_on_signin_pressed"]
-[connection signal="pressed" from="LoseScreen/retry" to="." method="_on_retry_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

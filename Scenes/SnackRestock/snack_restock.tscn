@@ -187,9 +187,10 @@ offset_bottom = 112.0
 mouse_filter = 2
 color = Color(0.3882353, 0.3882353, 0.3882353, 1)
 
-[node name="Timer" type="Timer" parent="." unique_id=96928126]
+[node name="snack_Timer" type="Timer" parent="." unique_id=96928126]
 wait_time = 90.0
 one_shot = true
+autostart = true
 
 [node name="Control" type="Control" parent="." unique_id=99631647]
 layout_mode = 3
@@ -399,4 +400,5 @@ sprite_frames = SubResource("SpriteFrames_6tu7v")
 autoplay = "default"
 flip_h = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="." to="." method="_on_finished"]
+[connection signal="timeout" from="snack_Timer" to="." method="_on_timer_timeout"]
