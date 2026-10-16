@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://b54sp53vntr8f"]
 
 [ext_resource type="Script" uid="uid://c5o2hekyf8pfo" path="res://Scripts/help_screen.gd" id="1_ag0tr"]
+[ext_resource type="Texture2D" uid="uid://dqqjnbc8iawb2" path="res://assets/helpscreen.png" id="2_3mbpc"]
 [ext_resource type="Texture2D" uid="uid://cg87t1sjbhgej" path="res://assets/button.png" id="2_7iiir"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_i44y6"]
 
 [node name="HelpScreen" type="Node" unique_id=735013264]
 script = ExtResource("1_ag0tr")
@@ -16,7 +15,8 @@ offset_right = 12.0
 offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_i44y6")
+texture = ExtResource("2_3mbpc")
+expand_mode = 1
 
 [node name="StartButton" type="TextureButton" parent="." unique_id=1297313844]
 anchors_preset = 7

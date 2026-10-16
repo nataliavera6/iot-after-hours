@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ipfbqvd054b8" path="res://Scripts/lose_screen.gd" id="1_ldcug"]
 [ext_resource type="Texture2D" uid="uid://cg87t1sjbhgej" path="res://assets/button.png" id="1_qdjbu"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_vau3p"]
+[ext_resource type="Texture2D" uid="uid://vfo7xgacyf0u" path="res://assets/LoseScreen.png" id="2_5l33y"]
 
 [node name="Lose" type="Node" unique_id=1221203061]
 script = ExtResource("1_ldcug")
@@ -17,7 +16,8 @@ offset_right = 9.0
 offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_vau3p")
+texture = ExtResource("2_5l33y")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1456079122]
 anchors_preset = 8
@@ -26,9 +26,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -102.0
-offset_top = -100.0
+offset_top = 40.0
 offset_right = 102.0
-offset_bottom = 100.0
+offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
 
