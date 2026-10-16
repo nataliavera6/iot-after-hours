@@ -8,6 +8,7 @@ func _ready() -> void:
 	$DocumentPuzzle.process_mode = Node.PROCESS_MODE_DISABLED
 	$MicrowavePuzzle.process_mode = Node.PROCESS_MODE_DISABLED
 	$PizarraPuzzle.process_mode=Node.PROCESS_MODE_DISABLED
+	$WiresPuzzle.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	
 	
@@ -101,8 +102,11 @@ func _on_pizarra_puzzle_pizarra_win() -> void:
 	get_tree().paused=false
 	$pizarra.hide()
 	active =="circuit"
+	
 #///////////
-
-
 func _on_circuit_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("player") && active=="circuit":
+		$WiresPuzzle.process_mode = Node.PROCESS_MODE_ALWAYS
+		$WiresPuzzle.show()
+		get_tree().paused=true
+		

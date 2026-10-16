@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://4131v77lpnof" path="res://Scenes/document-puzzle.tscn" id="6_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://6olc4qi6ett4" path="res://Scenes/microwave-puzzle.tscn" id="7_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://cdov58mjyxsgx" path="res://Scenes/SnackRestock/snack_restock.tscn" id="8_rku1e"]
+[ext_resource type="PackedScene" uid="uid://mjakxkvjn8op" path="res://Scenes/wires_puzzle.tscn" id="9_1phco"]
 [ext_resource type="Texture2D" uid="uid://bdaeus5eg36be" path="res://assets/minifridge.png" id="9_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://bnnchi8v4fa17" path="res://assets/IMG_0499.PNG" id="10_ldgsr"]
 [ext_resource type="Texture2D" uid="uid://cuivtnfn4psb4" path="res://assets/SpriteSheet.png" id="11_o5yvi"]
@@ -42,6 +43,9 @@ region = Rect2(823.28516, 618.0745, 171.12134, 255.94696)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2hde"]
 size = Vector2(93.48627, 100.825714)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrt1p"]
+size = Vector2(485.5769, 323.55774)
+
 [node name="Game" type="Node2D" unique_id=106238846]
 script = ExtResource("1_h4fw4")
 
@@ -70,6 +74,9 @@ visible = false
 visible = false
 
 [node name="SnackRestock" parent="." unique_id=1110966314 instance=ExtResource("8_rku1e")]
+visible = false
+
+[node name="WiresPuzzle" parent="." unique_id=1428209999 instance=ExtResource("9_1phco")]
 visible = false
 
 [node name="fridge" type="Area2D" parent="." unique_id=893397173]
@@ -142,6 +149,19 @@ texture = SubResource("AtlasTexture_rku1e")
 position = Vector2(0.31153107, -0.26790547)
 shape = SubResource("RectangleShape2D_v2hde")
 
+[node name="circuit" type="Area2D" parent="." unique_id=1793072142]
+position = Vector2(1091.69, 505.96)
+scale = Vector2(0.35, 0.35)
+
+[node name="Sprite2D" type="Sprite2D" parent="circuit" unique_id=1796553951]
+modulate = Color(0.31415284, 0.55274683, 0, 1)
+position = Vector2(0.31152344, -0.2679119)
+scale = Vector2(0.505, 0.482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="circuit" unique_id=2124862558]
+position = Vector2(-10.542816, 11.542892)
+shape = SubResource("RectangleShape2D_vrt1p")
+
 [connection signal="pizarra_win" from="PizarraPuzzle" to="." method="_on_pizarra_puzzle_pizarra_win"]
 [connection signal="login_won" from="LoginPuzzle" to="." method="_on_login_puzzle_login_won"]
 [connection signal="document_win" from="DocumentPuzzle" to="." method="_on_document_puzzle_document_win"]
@@ -153,3 +173,4 @@ shape = SubResource("RectangleShape2D_v2hde")
 [connection signal="body_entered" from="microwave" to="." method="_on_microwave_body_entered"]
 [connection signal="body_entered" from="document" to="." method="_on_document_body_entered"]
 [connection signal="body_entered" from="pizarra" to="." method="_on_pizarra_body_entered"]
+[connection signal="body_entered" from="circuit" to="." method="_on_circuit_body_entered"]
