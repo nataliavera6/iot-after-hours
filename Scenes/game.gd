@@ -135,7 +135,7 @@ func spawn_enemy() -> void:
 		return
 	var enemy = enemy_scene.instantiate()
 
-	get_parent().add_child.call_deferred(enemy)
+	add_child.call_deferred(enemy)
 	enemy.global_position = spawn_point.global_position
 	enemy_count+=1
 	if enemy_count >=3:

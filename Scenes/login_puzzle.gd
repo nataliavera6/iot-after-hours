@@ -35,14 +35,12 @@ func _on_signin_pressed() -> void:
 		login_won.emit()
 		print($Background4/PasswordFinal.text)
 		$Timer.stop()
-		
-		
-	else:
-		print("showing lose")
-		$Background4/PasswordFinal.text=" "
-		$LoseScreen.show()
-		$"Background4/sign-in".disabled=true
-
+			
+	#else:
+		#print("showing lose")
+		#$Background4/PasswordFinal.text=" "
+		#$LoseScreen.show()
+		#$"Background4/sign-in".disabled=true
 
 func _on_retry_pressed() -> void:
 	$Background1.show()
@@ -51,7 +49,6 @@ func _on_retry_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	$Background1/Label.hide()
-
 
 func _on_timer_2_timeout() -> void:
 	$LoseScreen.show()
